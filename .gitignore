@@ -1,0 +1,16 @@
+bin
+obj
+src/.vs/config/applicationhost.config
+*.suo
+src/.vs/Xena/v15/sqlite3/storage.ide
+*.user
+src/.vs/
+doc/VoucherParser/SampleSet/
+src/Xena.Web/Content/images/Normal/
+_ReSharper.*
+
+
+result.json
+lcov.info
+coverage.opencover.xml
+coverage-report
