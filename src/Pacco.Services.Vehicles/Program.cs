@@ -14,6 +14,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using Pacco.Services.Vehicles.Application;
+using Pacco.Services.Vehicles.Infrastructure;
 
 namespace Pacco.Services.Vehicles
 {
@@ -23,24 +25,19 @@ namespace Pacco.Services.Vehicles
             => await WebHost.CreateDefaultBuilder(args)
                 .ConfigureServices(services => services
                     .AddConvey()
-                    .AddCommandHandlers()
-                    .AddEventHandlers()
-                    .AddQueryHandlers()
-                    .AddInMemoryCommandDispatcher()
-                    .AddInMemoryEventDispatcher()
-                    .AddInMemoryQueryDispatcher()
+                    .AddApplication()
+                    .AddInfrastructure()
                     .AddWebApi())
                 .Configure(app => app
                     .UseErrorHandler()
-                    .UsePublicMessages()
+                    .UsePublicContracts()
                     .UseEndpoints(endpoints => endpoints
                         .Get("", ctx => ctx.Response.WriteAsync("Welcome to Pacco Parcels Service!")))
                     .UseDispatcherEndpoints(endpoints =>
                     {
+
                     }))
                 .Build()
                 .RunAsync();
-        
-            
     }
 }

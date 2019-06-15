@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp2.2</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Convey" Version="0.0.2-preview" />
+        <PackageReference Include="Convey.CQRS.Commands" Version="0.0.3-preview" />
+        <PackageReference Include="Convey.CQRS.Events" Version="0.0.3-preview" />
+        <PackageReference Include="Convey.CQRS.Queries" Version="0.0.3-preview" />
+    </ItemGroup>
+    
+    <ItemGroup>
+      <ProjectReference Include="..\Pacco.Services.Vehicles.Core\Pacco.Services.Vehicles.Core.csproj" />
+    </ItemGroup>
+
+</Project>

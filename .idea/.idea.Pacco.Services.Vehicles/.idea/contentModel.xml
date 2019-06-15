@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$USER_HOME$/Library/Caches/Rider2019.1/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2019.1/resharper-host/local/Transient/ReSharperHost/v191/SolutionCaches/_Pacco.Services.Vehicles.-69617294.00" t="ExcludeRecursive" />
+    <e p="$PROJECT_DIR$" t="IncludeFlat">
+      <e p="Pacco.Services.Vehicles.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="src/Pacco.Services.Vehicles" t="IncludeRecursive">
+        <e p="appsettings.Development.json" t="Include" />
+        <e p="appsettings.json" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="Pacco.Services.Vehicles.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Pacco.Services.Vehicles.csproj" t="IncludeRecursive" />
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="launchSettings.json" t="Include" />
+        </e>
+      </e>
+      <e p="src/Pacco.Services.Vehicles.Application" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Commands" t="Include">
+          <e p="AddVehicle.cs" t="Include" />
+          <e p="DeleteVehicle.cs" t="Include" />
+          <e p="UpdateVehicle.cs" t="Include" />
+        </e>
+        <e p="Extensions.cs" t="Include" />
+        <e p="Handlers" t="Include">
+          <e p="CreateVehicleHandler.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="Pacco.Services.Vehicles.Application.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Pacco.Services.Vehicles.Application.csproj" t="IncludeRecursive" />
+      </e>
+      <e p="src/Pacco.Services.Vehicles.Core" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Entities" t="Include">
+          <e p="Variants.cs" t="Include" />
+          <e p="Vehicle.cs" t="Include" />
+        </e>
+        <e p="Exceptions" t="Include">
+          <e p="DomainException.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="Pacco.Services.Vehicles.Core.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Pacco.Services.Vehicles.Core.csproj" t="IncludeRecursive" />
+        <e p="Repositories" t="Include">
+          <e p="IVehiclesRepository.cs" t="Include" />
+        </e>
+      </e>
+      <e p="src/Pacco.Services.Vehicles.Infrastructure" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Documents" t="Include">
+          <e p="Extensions.cs" t="Include" />
+          <e p="Vehicle.cs" t="Include" />
+        </e>
+        <e p="Extensions.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="Pacco.Services.Vehicles.Infrastructure.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Pacco.Services.Vehicles.Infrastructure.csproj" t="IncludeRecursive" />
+        <e p="Repositories" t="Include">
+          <e p="VehiclesMongoRepository.cs" t="Include" />
+        </e>
+      </e>
+    </e>
+  </component>
+</project>
