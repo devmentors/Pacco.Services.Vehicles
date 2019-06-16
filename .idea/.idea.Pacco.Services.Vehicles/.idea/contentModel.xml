@@ -33,6 +33,8 @@
         <e p="Extensions.cs" t="Include" />
         <e p="Handlers" t="Include">
           <e p="AddVehicleHandler.cs" t="Include" />
+          <e p="DeleteVehicleHandler.cs" t="Include" />
+          <e p="UpdateVehicleHandler.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">

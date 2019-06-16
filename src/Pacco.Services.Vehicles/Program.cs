@@ -38,6 +38,17 @@ namespace Pacco.Services.Vehicles
                     {
                         endpoints.Post<AddVehicle>("vehicles",
                             afterDispatch: (cmd, ctx) => ctx.Response.Created($"vehicles/{cmd.Id}"));
+                        
+                        endpoints.Put<UpdateVehicle>("vehicles/{id}",
+                            beforeDispatch: (cmd, ctx) =>
+                            {
+                                cmd.Bind(c => c.Id, ctx.Args<Guid>("id"));
+                                return Task.CompletedTask;
+                            },
+                            afterDispatch: (cmd, ctx) => ctx.Response.Created($"vehicles/{cmd.Id}"));
+                        
+                        endpoints.Delete("vehicles/{id}",
+                            ctx => ctx.SendAsync(new DeleteVehicle(ctx.Args<Guid>("id"))));
                     }))
                 .Build()
                 .RunAsync();

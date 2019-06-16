@@ -52,6 +52,9 @@ namespace Pacco.Services.Vehicles.Core.Entities
             PricePerHour = pricePerHour;
         }
 
+        public void ChangeVariants(Variants variants)
+            => Variants = variants;
+
         public void AddVariants(params Variants[] variants)
         {
             foreach (var variant in variants)

@@ -7,6 +7,10 @@ namespace Pacco.Services.Vehicles.Application.Commands
     {
         public Guid Id { get; }
 
+        public DeleteVehicle()
+        {
+        }
+        
         public DeleteVehicle(Guid id)
             => Id = id;
     }
