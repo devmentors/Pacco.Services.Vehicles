@@ -3,6 +3,7 @@ using Convey;
 using Convey.Persistence.MongoDB;
 using Microsoft.Extensions.DependencyInjection;
 using Pacco.Services.Vehicles.Core.Repositories;
+using Pacco.Services.Vehicles.Infrastructure.Documents;
 using Pacco.Services.Vehicles.Infrastructure.Repositories;
 
 namespace Pacco.Services.Vehicles.Infrastructure
@@ -13,11 +14,9 @@ namespace Pacco.Services.Vehicles.Infrastructure
         {
             builder.Services.AddTransient<IVehiclesRepository, VehiclesMongoRepository>();
             
-            builder
+            return builder
                 .AddMongo()
-                .AddMongoRepository<Documents.Vehicle, Guid>("Vehicles");
-
-            return builder;
+                .AddMongoRepository<VehicleDocument, Guid>("Vehicles");
         }
     }
 }

@@ -4,7 +4,7 @@ using Pacco.Services.Vehicles.Core.Entities;
 
 namespace Pacco.Services.Vehicles.Infrastructure.Documents
 {
-    public class Vehicle : IIdentifiable<Guid>
+    internal class VehicleDocument : IIdentifiable<Guid>
     {
         public Guid Id { get; set; }
         public string Brand { get; set; }

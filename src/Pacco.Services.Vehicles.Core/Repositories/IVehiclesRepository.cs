@@ -8,7 +8,7 @@ namespace Pacco.Services.Vehicles.Core.Repositories
     {
         Task<Vehicle> GetAsync(Guid id);
 
-        Task CreateAsync(Vehicle vehicle);
+        Task AddAsync(Vehicle vehicle);
         Task UpdateAsync(Vehicle vehicle);
         Task DeleteAsync(Vehicle vehicle);
     }

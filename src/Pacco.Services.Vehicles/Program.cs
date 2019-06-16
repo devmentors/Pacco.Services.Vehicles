@@ -15,6 +15,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Pacco.Services.Vehicles.Application;
+using Pacco.Services.Vehicles.Application.Commands;
 using Pacco.Services.Vehicles.Infrastructure;
 
 namespace Pacco.Services.Vehicles
@@ -35,7 +36,8 @@ namespace Pacco.Services.Vehicles
                         .Get("", ctx => ctx.Response.WriteAsync("Welcome to Pacco Parcels Service!")))
                     .UseDispatcherEndpoints(endpoints =>
                     {
-
+                        endpoints.Post<AddVehicle>("vehicles",
+                            afterDispatch: (cmd, ctx) => ctx.Response.Created($"vehicles/{cmd.Id}"));
                     }))
                 .Build()
                 .RunAsync();

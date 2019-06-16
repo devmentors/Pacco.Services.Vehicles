@@ -8,9 +8,9 @@ namespace Pacco.Services.Vehicles.Infrastructure.Repositories
 {
     internal class VehiclesMongoRepository : IVehiclesRepository
     {
-        private readonly IMongoRepository<Documents.Vehicle, Guid> _repository;
+        private readonly IMongoRepository<VehicleDocument, Guid> _repository;
 
-        public VehiclesMongoRepository(IMongoRepository<Documents.Vehicle, Guid> repository)
+        public VehiclesMongoRepository(IMongoRepository<VehicleDocument, Guid> repository)
             => _repository = repository;
 
         public Task<Core.Entities.Vehicle> GetAsync(Guid id)
@@ -18,7 +18,7 @@ namespace Pacco.Services.Vehicles.Infrastructure.Repositories
                 .GetAsync(id)
                 .AsEntityAsync();
 
-        public Task CreateAsync(Core.Entities.Vehicle vehicle)
+        public Task AddAsync(Core.Entities.Vehicle vehicle)
             => _repository.AddAsync(vehicle.AsDocument());
 
         public Task UpdateAsync(Core.Entities.Vehicle vehicle)

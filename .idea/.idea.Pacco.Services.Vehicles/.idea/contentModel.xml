@@ -32,7 +32,7 @@
         </e>
         <e p="Extensions.cs" t="Include" />
         <e p="Handlers" t="Include">
-          <e p="CreateVehicleHandler.cs" t="Include" />
+          <e p="AddVehicleHandler.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -68,7 +68,7 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="Documents" t="Include">
           <e p="Extensions.cs" t="Include" />
-          <e p="Vehicle.cs" t="Include" />
+          <e p="VehicleDocument.cs" t="Include" />
         </e>
         <e p="Extensions.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">

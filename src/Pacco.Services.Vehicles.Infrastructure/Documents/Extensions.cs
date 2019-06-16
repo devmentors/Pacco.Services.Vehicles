@@ -1,11 +1,12 @@
 using System.Threading.Tasks;
+using Pacco.Services.Vehicles.Core.Entities;
 
 namespace Pacco.Services.Vehicles.Infrastructure.Documents
 {
     internal static class Extensions
     {
-        public static Core.Entities.Vehicle AsEntity(this Documents.Vehicle document)
-            => new Core.Entities.Vehicle(
+        public static Vehicle AsEntity(this VehicleDocument document)
+            => new Vehicle(
                 document.Id,
                 document.Brand,
                 document.Model,
@@ -14,11 +15,11 @@ namespace Pacco.Services.Vehicles.Infrastructure.Documents
                 document.PricePerHour,
                 document.Variants);
 
-        public static async Task<Core.Entities.Vehicle> AsEntityAsync(this Task<Documents.Vehicle> task)
+        public static async Task<Vehicle> AsEntityAsync(this Task<VehicleDocument> task)
             => (await task).AsEntity();
 
-        public static Documents.Vehicle AsDocument(this Core.Entities.Vehicle entity)
-            => new Documents.Vehicle
+        public static VehicleDocument AsDocument(this Vehicle entity)
+            => new VehicleDocument
             {
                 Id = entity.Id,
                 Brand = entity.Brand,
@@ -29,7 +30,7 @@ namespace Pacco.Services.Vehicles.Infrastructure.Documents
                 Variants = entity.Variants
             };
         
-        public static async Task<Documents.Vehicle> AsDocumentAsync(this Task<Core.Entities.Vehicle> task)
+        public static async Task<VehicleDocument> AsDocumentAsync(this Task<Vehicle> task)
             => (await task).AsDocument();
     }
 }

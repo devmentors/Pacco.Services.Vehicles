@@ -34,7 +34,7 @@ namespace Pacco.Services.Vehicles.Core.Entities
 
         public void ChangeDescription(string description)
         {
-            if (!string.IsNullOrEmpty(description))
+            if (string.IsNullOrEmpty(description))
             {
                 throw new DomainException("Vehicle's description cannot be empty.");
             }
