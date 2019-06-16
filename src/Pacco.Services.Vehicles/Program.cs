@@ -16,6 +16,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Pacco.Services.Vehicles.Application;
 using Pacco.Services.Vehicles.Application.Commands;
+using Pacco.Services.Vehicles.Application.DTO;
+using Pacco.Services.Vehicles.Application.Queries;
+using Pacco.Services.Vehicles.Core.Entities;
 using Pacco.Services.Vehicles.Infrastructure;
 
 namespace Pacco.Services.Vehicles
@@ -36,6 +39,9 @@ namespace Pacco.Services.Vehicles
                         .Get("", ctx => ctx.Response.WriteAsync("Welcome to Pacco Parcels Service!")))
                     .UseDispatcherEndpoints(endpoints =>
                     {
+                        endpoints.Get<GetVehicles,IEnumerable<VehicleDto>>("vehicles",
+                            (query, ctx) => ctx.QueryAsync(query));
+
                         endpoints.Post<AddVehicle>("vehicles",
                             afterDispatch: (cmd, ctx) => ctx.Response.Created($"vehicles/{cmd.Id}"));
                         

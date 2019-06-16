@@ -30,10 +30,14 @@
           <e p="DeleteVehicle.cs" t="Include" />
           <e p="UpdateVehicle.cs" t="Include" />
         </e>
+        <e p="DTO" t="Include">
+          <e p="VehicleDto.cs" t="Include" />
+        </e>
         <e p="Extensions.cs" t="Include" />
         <e p="Handlers" t="Include">
           <e p="AddVehicleHandler.cs" t="Include" />
           <e p="DeleteVehicleHandler.cs" t="Include" />
+          <e p="GetVehiclesHandler.cs" t="Include" />
           <e p="UpdateVehicleHandler.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
@@ -44,6 +48,9 @@
           </e>
         </e>
         <e p="Pacco.Services.Vehicles.Application.csproj" t="IncludeRecursive" />
+        <e p="Queries" t="Include">
+          <e p="GetVehicles.cs" t="Include" />
+        </e>
       </e>
       <e p="src/Pacco.Services.Vehicles.Core" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
