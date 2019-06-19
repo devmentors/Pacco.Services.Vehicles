@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b067f37e-ca9f-4703-b16e-5b310c395302" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Pacco.Services.Vehicles.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pacco.Services.Vehicles.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/.idea.Pacco.Services.Vehicles/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/.idea.Pacco.Services.Vehicles/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pacco.Services.Vehicles.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Pacco.Services.Vehicles.csproj" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,11 +13,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Pacco.Services.Vehicles.csproj">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+            <state relative-caret-position="105">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
             </state>
           </provider>
         </entry>
@@ -24,64 +25,14 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Program.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
+            <state relative-caret-position="90">
               <caret line="27" column="39" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
               <folding>
-                <marker date="1560492702908" expanded="false" signature="6:430" ph="..." />
-                <marker date="1560492702908" expanded="true" signature="465:1469" ph="{...}" />
-                <marker date="1560492702908" expanded="true" signature="492:1467" ph="{...}" />
-                <marker date="1560492702908" expanded="true" signature="1360:1383" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Core/Entities/Vehicle.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
-              <folding>
-                <marker date="1560494995041" expanded="true" signature="6:60" ph="..." />
-                <marker date="1560494995041" expanded="true" signature="109:2231" ph="{...}" />
-                <marker date="1560494995041" expanded="true" signature="136:2229" ph="{...}" />
-                <marker date="1560494995041" expanded="true" signature="669:945" ph="{...}" />
-                <marker date="1560494995041" expanded="true" signature="1202:1257" ph="{...}" />
-                <marker date="1560494995041" expanded="true" signature="1316:1541" ph="{...}" />
-                <marker date="1560494995041" expanded="true" signature="1378:1491" ph="{...}" />
-                <marker date="1560494995041" expanded="true" signature="1603:1827" ph="{...}" />
-                <marker date="1560494995041" expanded="true" signature="1648:1775" ph="{...}" />
-                <marker date="1560494995041" expanded="true" signature="1888:2019" ph="{...}" />
-                <marker date="1560494995041" expanded="true" signature="1944:2009" ph="{...}" />
-                <marker date="1560494995041" expanded="true" signature="2091:2223" ph="{...}" />
-                <marker date="1560494995041" expanded="true" signature="2147:2213" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Core/Exceptions/DomainException.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-              <folding>
-                <marker date="1560494441898" expanded="true" signature="64:208" ph="{...}" />
-                <marker date="1560494441898" expanded="true" signature="111:206" ph="{...}" />
-                <marker date="1560494441898" expanded="true" signature="180:200" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Core/Entities/Variants.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="26" lean-forward="true" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
-              <folding>
-                <marker date="1560494256979" expanded="true" signature="62:254" ph="{...}" />
-                <marker date="1560494256979" expanded="true" signature="101:252" ph="{...}" />
+                <marker date="1560686461861" expanded="false" signature="6:714" ph="..." />
+                <marker date="1560686461861" expanded="true" signature="749:2483" ph="{...}" />
+                <marker date="1560686461861" expanded="true" signature="776:2481" ph="{...}" />
+                <marker date="1560686461861" expanded="true" signature="1450:2419" ph="{...}" />
+                <marker date="1560686461861" expanded="true" signature="1954:2119" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -93,20 +44,17 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Core/Entities/Variants.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Core/Entities/Vehicle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Program.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Core/Exceptions/DomainException.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Pacco.Services.Vehicles.csproj" />
         <option value="$PROJECT_DIR$/Program.cs" />
         <option value="$PROJECT_DIR$/Core/Entities/Variant.cs" />
         <option value="$PROJECT_DIR$/Core/Entities/Variants.cs" />
         <option value="$PROJECT_DIR$/Core/Exceptions/DomainException.cs" />
         <option value="$PROJECT_DIR$/Core/Entities/Vehicle.cs" />
+        <option value="$PROJECT_DIR$/Pacco.Services.Vehicles.csproj" />
       </list>
     </option>
   </component>
@@ -128,11 +76,20 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="SolutionExplorer">
-        <option name="show-all-files" value="false" />
-      </pane>
       <pane id="AssemblyExplorer" />
       <pane id="FileSystemExplorer" />
+      <pane id="SolutionExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="Pacco.Services.Vehicles" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <option name="show-all-files" value="false" />
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -199,11 +156,12 @@
       <updated>1560492560880</updated>
       <workItem from="1560492563548" duration="4167000" />
       <workItem from="1560577252032" duration="276000" />
+      <workItem from="1560948340872" duration="192000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4443000" />
+    <option name="totallyTimeSpent" value="4635000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -215,9 +173,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25274727" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25579977" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -260,68 +219,27 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Startup.cs" />
-    <entry file="file://$PROJECT_DIR$/Pacco.Services.Vehicles.csproj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Core/Entities/Vehicle.cs" />
+    <entry file="file://$PROJECT_DIR$/Core/Exceptions/DomainException.cs" />
+    <entry file="file://$PROJECT_DIR$/Core/Entities/Variants.cs" />
     <entry file="file://$PROJECT_DIR$/Program.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
+        <state relative-caret-position="90">
           <caret line="27" column="39" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
           <folding>
-            <marker date="1560492702908" expanded="false" signature="6:430" ph="..." />
-            <marker date="1560492702908" expanded="true" signature="465:1469" ph="{...}" />
-            <marker date="1560492702908" expanded="true" signature="492:1467" ph="{...}" />
-            <marker date="1560492702908" expanded="true" signature="1360:1383" ph="{...}" />
+            <marker date="1560686461861" expanded="false" signature="6:714" ph="..." />
+            <marker date="1560686461861" expanded="true" signature="749:2483" ph="{...}" />
+            <marker date="1560686461861" expanded="true" signature="776:2481" ph="{...}" />
+            <marker date="1560686461861" expanded="true" signature="1450:2419" ph="{...}" />
+            <marker date="1560686461861" expanded="true" signature="1954:2119" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Core/Entities/Vehicle.cs">
+    <entry file="file://$PROJECT_DIR$/Pacco.Services.Vehicles.csproj">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
-          <folding>
-            <marker date="1560494995041" expanded="true" signature="6:60" ph="..." />
-            <marker date="1560494995041" expanded="true" signature="109:2231" ph="{...}" />
-            <marker date="1560494995041" expanded="true" signature="136:2229" ph="{...}" />
-            <marker date="1560494995041" expanded="true" signature="669:945" ph="{...}" />
-            <marker date="1560494995041" expanded="true" signature="1202:1257" ph="{...}" />
-            <marker date="1560494995041" expanded="true" signature="1316:1541" ph="{...}" />
-            <marker date="1560494995041" expanded="true" signature="1378:1491" ph="{...}" />
-            <marker date="1560494995041" expanded="true" signature="1603:1827" ph="{...}" />
-            <marker date="1560494995041" expanded="true" signature="1648:1775" ph="{...}" />
-            <marker date="1560494995041" expanded="true" signature="1888:2019" ph="{...}" />
-            <marker date="1560494995041" expanded="true" signature="1944:2009" ph="{...}" />
-            <marker date="1560494995041" expanded="true" signature="2091:2223" ph="{...}" />
-            <marker date="1560494995041" expanded="true" signature="2147:2213" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Core/Exceptions/DomainException.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-          <folding>
-            <marker date="1560494441898" expanded="true" signature="64:208" ph="{...}" />
-            <marker date="1560494441898" expanded="true" signature="111:206" ph="{...}" />
-            <marker date="1560494441898" expanded="true" signature="180:200" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Core/Entities/Variants.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="26" lean-forward="true" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
-          <folding>
-            <marker date="1560494256979" expanded="true" signature="62:254" ph="{...}" />
-            <marker date="1560494256979" expanded="true" signature="101:252" ph="{...}" />
-          </folding>
+        <state relative-caret-position="105">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>

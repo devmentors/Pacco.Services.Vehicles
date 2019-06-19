@@ -1,24 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 using System.Threading.Tasks;
 using Convey;
-using Convey.CQRS.Commands;
-using Convey.CQRS.Events;
-using Convey.CQRS.Queries;
 using Convey.WebApi;
 using Convey.WebApi.CQRS;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Logging;
 using Pacco.Services.Vehicles.Application;
 using Pacco.Services.Vehicles.Application.Commands;
 using Pacco.Services.Vehicles.Application.DTO;
 using Pacco.Services.Vehicles.Application.Queries;
-using Pacco.Services.Vehicles.Core.Entities;
 using Pacco.Services.Vehicles.Infrastructure;
 
 namespace Pacco.Services.Vehicles
@@ -40,7 +32,7 @@ namespace Pacco.Services.Vehicles
                     .UseDispatcherEndpoints(endpoints =>
                     {
                         endpoints.Get<GetVehicles,IEnumerable<VehicleDto>>("vehicles",
-                            (query, ctx) => ctx.QueryAsync(query));
+                            (query, ctx) => ctx.QueryAsync<GetVehicles,IEnumerable<VehicleDto>>(query));
 
                         endpoints.Post<AddVehicle>("vehicles",
                             afterDispatch: (cmd, ctx) => ctx.Response.Created($"vehicles/{cmd.Id}"));

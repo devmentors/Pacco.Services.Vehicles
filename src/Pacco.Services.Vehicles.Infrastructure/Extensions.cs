@@ -1,5 +1,6 @@
 using System;
 using Convey;
+using Convey.CQRS.Queries;
 using Convey.Persistence.MongoDB;
 using Microsoft.Extensions.DependencyInjection;
 using Pacco.Services.Vehicles.Core.Repositories;
@@ -16,7 +17,9 @@ namespace Pacco.Services.Vehicles.Infrastructure
             
             return builder
                 .AddMongo()
-                .AddMongoRepository<VehicleDocument, Guid>("Vehicles");
+                .AddMongoRepository<VehicleDocument, Guid>("Vehicles")
+                .AddQueryHandlers()
+                .AddInMemoryQueryDispatcher();
         }
     }
 }

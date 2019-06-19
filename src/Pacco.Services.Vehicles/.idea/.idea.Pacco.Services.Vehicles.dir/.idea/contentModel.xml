@@ -7,15 +7,6 @@
       <e p="appsettings.Development.json" t="Include" />
       <e p="appsettings.json" t="Include" />
       <e p="bin" t="ExcludeRecursive" />
-      <e p="Core" t="Include">
-        <e p="ENTITIES" t="Include">
-          <e p="Variants.cs" t="Include" />
-          <e p="Vehicle.cs" t="Include" />
-        </e>
-        <e p="Exceptions" t="Include">
-          <e p="DomainException.cs" t="Include" />
-        </e>
-      </e>
       <e p="obj" t="ExcludeRecursive">
         <e p="Debug" t="Include">
           <e p="netcoreapp2.2" t="Include">

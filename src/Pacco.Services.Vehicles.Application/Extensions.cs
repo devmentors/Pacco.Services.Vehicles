@@ -1,7 +1,6 @@
 ﻿using Convey;
 using Convey.CQRS.Commands;
 using Convey.CQRS.Events;
-using Convey.CQRS.Queries;
 
 namespace Pacco.Services.Vehicles.Application
 {
@@ -11,9 +10,7 @@ namespace Pacco.Services.Vehicles.Application
             => builder
                 .AddCommandHandlers()
                 .AddEventHandlers()
-                .AddQueryHandlers()
                 .AddInMemoryCommandDispatcher()
-                .AddInMemoryEventDispatcher()
-                .AddInMemoryQueryDispatcher();
+                .AddInMemoryEventDispatcher();
     }
 }
