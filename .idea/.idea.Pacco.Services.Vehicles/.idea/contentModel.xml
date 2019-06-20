@@ -33,11 +33,22 @@
         <e p="DTO" t="Include">
           <e p="VehicleDto.cs" t="Include" />
         </e>
+        <e p="Events" t="Include">
+          <e p="AddVehicleRejected.cs" t="Include" />
+          <e p="DeletedVehicleRejected.cs" t="Include" />
+          <e p="UpdateVehicleRejected.cs" t="Include" />
+          <e p="VehicleAdded.cs" t="Include" />
+          <e p="VehicleDeleted.cs" t="Include" />
+          <e p="VehicleUpdated.cs" t="Include" />
+        </e>
         <e p="Extensions.cs" t="Include" />
         <e p="Handlers" t="Include">
           <e p="AddVehicleHandler.cs" t="Include" />
           <e p="DeleteVehicleHandler.cs" t="Include" />
           <e p="UpdateVehicleHandler.cs" t="Include" />
+        </e>
+        <e p="Messaging" t="Include">
+          <e p="IMessageBroker.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -81,6 +92,9 @@
         <e p="Extensions.cs" t="Include" />
         <e p="Handlers" t="Include">
           <e p="GetVehiclesHandler.cs" t="Include" />
+        </e>
+        <e p="Messaging" t="Include">
+          <e p="MessageBroker.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">

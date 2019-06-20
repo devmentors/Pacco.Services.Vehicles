@@ -14,5 +14,4 @@
     <ItemGroup>
       <ProjectReference Include="..\Pacco.Services.Vehicles.Core\Pacco.Services.Vehicles.Core.csproj" />
     </ItemGroup>
-
 </Project>
