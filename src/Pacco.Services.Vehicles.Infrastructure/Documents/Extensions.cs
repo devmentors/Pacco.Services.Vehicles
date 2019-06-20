@@ -6,7 +6,7 @@ namespace Pacco.Services.Vehicles.Infrastructure.Documents
     internal static class Extensions
     {
         public static Vehicle AsEntity(this VehicleDocument document)
-            => new Vehicle(
+            => document is null? null : new Vehicle(
                 document.Id,
                 document.Brand,
                 document.Model,

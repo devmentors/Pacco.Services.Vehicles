@@ -1,6 +1,7 @@
 using System;
 using Convey;
 using Convey.CQRS.Queries;
+using Convey.MessageBrokers;
 using Convey.MessageBrokers.CQRS;
 using Convey.MessageBrokers.RabbitMQ;
 using Convey.Persistence.MongoDB;
@@ -27,8 +28,6 @@ namespace Pacco.Services.Vehicles.Infrastructure
                 .AddMongoRepository<VehicleDocument, Guid>("Vehicles")
                 .AddRabbitMq()
                 .AddQueryHandlers()
-                .AddServiceBusCommandDispatcher()
-                .AddServiceBusEventDispatcher()
                 .AddInMemoryQueryDispatcher();
         }
 
@@ -38,7 +37,7 @@ namespace Pacco.Services.Vehicles.Infrastructure
                 .SubscribeCommand<AddVehicle>()
                 .SubscribeCommand<UpdateVehicle>()
                 .SubscribeCommand<DeleteVehicle>();
-
+            
             return app;
         }
     }

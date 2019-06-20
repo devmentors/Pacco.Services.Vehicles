@@ -15,11 +15,6 @@ namespace Pacco.Services.Vehicles.Application.Commands
         public decimal PricePerHour { get; }
         public Variants Variants { get; }
 
-        public AddVehicle()
-        {
-            
-        }
-        
         [JsonConstructor]
         public AddVehicle(Guid id, string brand, string model, string description, ushort payloadCapacity, 
             decimal pricePerHour, Variants variants)

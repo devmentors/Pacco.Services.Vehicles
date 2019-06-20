@@ -1,6 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Convey.Persistence.MongoDB;
 using Pacco.Services.Vehicles.Core.Entities;
@@ -20,14 +18,6 @@ namespace Pacco.Services.Vehicles.Infrastructure.Repositories
             => _repository
                 .GetAsync(id)
                 .AsEntityAsync();
-
-        public async Task<IEnumerable<Vehicle>> GetAsync(decimal priceFrom, decimal priceTo, Variants variants)
-        {
-            var documents = await  _repository.FindAsync(v => v.PricePerHour >= priceFrom 
-                                                      && v.PricePerHour <= priceTo && v.Variants == variants);
-
-            return documents.Select(d => d.AsEntity());
-        }
 
         public Task AddAsync(Vehicle vehicle)
             => _repository.AddAsync(vehicle.AsDocument());
