@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Convey;
+using Convey.CQRS.Queries;
 using Convey.WebApi;
 using Convey.WebApi.CQRS;
 using Microsoft.AspNetCore;
@@ -25,14 +26,14 @@ namespace Pacco.Services.Vehicles
                     .AddInfrastructure()
                     .AddWebApi())
                 .Configure(app => app
+                    .UseInfrastructure()
                     .UseErrorHandler()
                     .UsePublicContracts()
                     .UseEndpoints(endpoints => endpoints
                         .Get("", ctx => ctx.Response.WriteAsync("Welcome to Pacco Parcels Service!")))
                     .UseDispatcherEndpoints(endpoints =>
                     {
-                        endpoints.Get<GetVehicles,IEnumerable<VehicleDto>>("vehicles",
-                            (query, ctx) => ctx.QueryAsync<GetVehicles,IEnumerable<VehicleDto>>(query));
+                        endpoints.Get<GetVehicles,PagedResult<VehicleDto>>("vehicles");
 
                         endpoints.Post<AddVehicle>("vehicles",
                             afterDispatch: (cmd, ctx) => ctx.Response.Created($"vehicles/{cmd.Id}"));

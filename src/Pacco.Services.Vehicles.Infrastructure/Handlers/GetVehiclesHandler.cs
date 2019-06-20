@@ -1,6 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Convey.CQRS.Queries;
 using Convey.Persistence.MongoDB;
@@ -10,7 +8,7 @@ using Pacco.Services.Vehicles.Infrastructure.Documents;
 
 namespace Pacco.Services.Vehicles.Infrastructure.Handlers
 {
-    internal class GetVehiclesHandler : IQueryHandler<GetVehicles, IEnumerable<VehicleDto>>
+    internal class GetVehiclesHandler : IQueryHandler<GetVehicles, PagedResult<VehicleDto>>
     {
         private readonly IMongoRepository<VehicleDocument, Guid> _repository;
 
@@ -19,12 +17,12 @@ namespace Pacco.Services.Vehicles.Infrastructure.Handlers
             _repository = repository;
         }
         
-        public async Task<IEnumerable<VehicleDto>> HandleAsync(GetVehicles query)
+        public async Task<PagedResult<VehicleDto>> HandleAsync(GetVehicles query)
         {
-            var documents = await  _repository.FindAsync(v => v.PricePerHour >= query.PriceFrom  
-                                                              &&  v.PricePerHour <= query.PriceTo && v.Variants == query.Variants);
+            var pagedResult = await  _repository.BrowseAsync(v => v.PricePerHour >= query.PriceFrom  
+                                                              &&  v.PricePerHour <= query.PriceTo && v.Variants == query.Variants, query);
 
-            return documents?.Select(v => new VehicleDto
+            return pagedResult?.Map(v => new VehicleDto
             {
                 Id = v.Id,
                 Brand = v.Brand,

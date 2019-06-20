@@ -5,7 +5,7 @@ using Pacco.Services.Vehicles.Core.Entities;
 
 namespace Pacco.Services.Vehicles.Application.Queries
 {
-    public class GetVehicles : IQuery<IEnumerable<VehicleDto>>
+    public class GetVehicles : PagedQueryBase, IQuery<PagedResult<VehicleDto>>
     {
         public decimal PriceFrom { get; set; }
         public decimal PriceTo { get; set; }
