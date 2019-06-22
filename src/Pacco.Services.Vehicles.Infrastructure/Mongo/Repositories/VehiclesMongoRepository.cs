@@ -3,9 +3,9 @@ using System.Threading.Tasks;
 using Convey.Persistence.MongoDB;
 using Pacco.Services.Vehicles.Core.Entities;
 using Pacco.Services.Vehicles.Core.Repositories;
-using Pacco.Services.Vehicles.Infrastructure.Documents;
+using Pacco.Services.Vehicles.Infrastructure.Mongo.Documents;
 
-namespace Pacco.Services.Vehicles.Infrastructure.Repositories
+namespace Pacco.Services.Vehicles.Infrastructure.Mongo.Repositories
 {
     internal class VehiclesMongoRepository : IVehiclesRepository
     {

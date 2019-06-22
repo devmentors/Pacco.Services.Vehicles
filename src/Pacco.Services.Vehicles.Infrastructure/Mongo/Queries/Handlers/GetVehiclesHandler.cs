@@ -4,9 +4,9 @@ using Convey.CQRS.Queries;
 using Convey.Persistence.MongoDB;
 using Pacco.Services.Vehicles.Application.DTO;
 using Pacco.Services.Vehicles.Application.Queries;
-using Pacco.Services.Vehicles.Infrastructure.Documents;
+using Pacco.Services.Vehicles.Infrastructure.Mongo.Documents;
 
-namespace Pacco.Services.Vehicles.Infrastructure.Handlers
+namespace Pacco.Services.Vehicles.Infrastructure.Mongo.Queries.Handlers
 {
     internal class GetVehiclesHandler : IQueryHandler<GetVehicles, PagedResult<VehicleDto>>
     {

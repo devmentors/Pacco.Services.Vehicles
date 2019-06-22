@@ -1,7 +1,7 @@
 using System.Threading.Tasks;
 using Pacco.Services.Vehicles.Core.Entities;
 
-namespace Pacco.Services.Vehicles.Infrastructure.Documents
+namespace Pacco.Services.Vehicles.Infrastructure.Mongo.Documents
 {
     internal static class Extensions
     {

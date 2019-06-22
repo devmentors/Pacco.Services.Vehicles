@@ -9,9 +9,10 @@ using Microsoft.Extensions.DependencyInjection;
 using Pacco.Services.Vehicles.Application.Commands;
 using Pacco.Services.Vehicles.Application.Messaging;
 using Pacco.Services.Vehicles.Core.Repositories;
-using Pacco.Services.Vehicles.Infrastructure.Documents;
+using Pacco.Services.Vehicles.Infrastructure.IoC;
 using Pacco.Services.Vehicles.Infrastructure.Messaging;
-using Pacco.Services.Vehicles.Infrastructure.Repositories;
+using Pacco.Services.Vehicles.Infrastructure.Mongo.Documents;
+using Pacco.Services.Vehicles.Infrastructure.Mongo.Repositories;
 
 namespace Pacco.Services.Vehicles.Infrastructure
 {
@@ -22,14 +23,13 @@ namespace Pacco.Services.Vehicles.Infrastructure
             builder.Services.AddTransient<IVehiclesRepository, VehiclesMongoRepository>();
             builder.Services.AddTransient<IMessageBroker, MessageBroker>();
 
-            builder.AddInitializer<IMongoDbInitializer>();
-
             return builder
                 .AddMongo()
                 .AddMongoRepository<VehicleDocument, Guid>("Vehicles")
                 .AddRabbitMq()
                 .AddQueryHandlers()
-                .AddInMemoryQueryDispatcher();
+                .AddInMemoryQueryDispatcher()
+                .RegisterExceptionDecorators();
         }
 
         public static IApplicationBuilder UseInfrastructure(this IApplicationBuilder app)

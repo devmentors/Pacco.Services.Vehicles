@@ -70,11 +70,11 @@
           <e p="Vehicle.cs" t="Include" />
         </e>
         <e p="Exceptions" t="Include">
-          <e p="DomainException.cs" t="Include" />
           <e p="ExceptionBase.cs" t="Include" />
           <e p="InvalidAggregateIdException.cs" t="Include" />
           <e p="InvalidVehicleDescriptionException.cs" t="Include" />
           <e p="InvalidVehiclePricePerHourException.cs" t="Include" />
+          <e p="VehicleNotFoundException.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -90,16 +90,27 @@
       </e>
       <e p="src/Pacco.Services.Vehicles.Infrastructure" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
-        <e p="Documents" t="Include">
-          <e p="Extensions.cs" t="Include" />
-          <e p="VehicleDocument.cs" t="Include" />
-        </e>
         <e p="Extensions.cs" t="Include" />
-        <e p="Handlers" t="Include">
-          <e p="GetVehiclesHandler.cs" t="Include" />
+        <e p="IoC" t="Include">
+          <e p="CommandHandlerExceptionDecorator.cs" t="Include" />
+          <e p="Extensions.cs" t="Include" />
         </e>
         <e p="Messaging" t="Include">
           <e p="MessageBroker.cs" t="Include" />
+        </e>
+        <e p="Mongo" t="Include">
+          <e p="Documents" t="Include">
+            <e p="Extensions.cs" t="Include" />
+            <e p="VehicleDocument.cs" t="Include" />
+          </e>
+          <e p="Queries" t="Include">
+            <e p="Handlers" t="Include">
+              <e p="GetVehiclesHandler.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Repositories" t="Include">
+            <e p="VehiclesMongoRepository.cs" t="Include" />
+          </e>
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -109,9 +120,6 @@
           </e>
         </e>
         <e p="Pacco.Services.Vehicles.Infrastructure.csproj" t="IncludeRecursive" />
-        <e p="Repositories" t="Include">
-          <e p="VehiclesMongoRepository.cs" t="Include" />
-        </e>
       </e>
     </e>
   </component>

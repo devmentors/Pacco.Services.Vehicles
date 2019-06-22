@@ -24,7 +24,7 @@ namespace Pacco.Services.Vehicles.Application.Commands.Handlers
 
             if (vehicle is null)
             {
-                throw new DomainException($"Vehicle with {command.Id} Id not found");
+                throw new VehicleNotFoundException(command.Id);
             }
             
             await _repository.DeleteAsync(vehicle);

@@ -2,7 +2,7 @@ using System;
 using Convey.Types;
 using Pacco.Services.Vehicles.Core.Entities;
 
-namespace Pacco.Services.Vehicles.Infrastructure.Documents
+namespace Pacco.Services.Vehicles.Infrastructure.Mongo.Documents
 {
     internal class VehicleDocument : IIdentifiable<Guid>
     {
