@@ -5,7 +5,7 @@ namespace Pacco.Services.Vehicles.Core.Entities
 {
     public class Vehicle
     {
-        public Guid Id { get; protected set; }
+        public AggregateId Id { get; protected set; }
         public string Brand { get; protected set; }
         public string Model { get; protected set; }
         public string Description { get; protected set; }
@@ -13,7 +13,7 @@ namespace Pacco.Services.Vehicles.Core.Entities
         public decimal PricePerHour { get; protected set; }
         public Variants Variants { get; protected set; }
 
-        public Vehicle(Guid id, string brand, string model, string description, ushort payloadCapacity,
+        public Vehicle(AggregateId id, string brand, string model, string description, ushort payloadCapacity,
             decimal pricePerHour)
         {
             Id = id;
@@ -25,7 +25,7 @@ namespace Pacco.Services.Vehicles.Core.Entities
             AddVariants(Variants.Standard);
         }
         
-        public Vehicle(Guid id, string brand, string model, string description, ushort payloadCapacity,
+        public Vehicle(AggregateId id, string brand, string model, string description, ushort payloadCapacity,
             decimal pricePerHour, params Variants[] variants) 
             : this(id, brand, model, description, payloadCapacity, pricePerHour)
         {
@@ -36,7 +36,7 @@ namespace Pacco.Services.Vehicles.Core.Entities
         {
             if (string.IsNullOrEmpty(description))
             {
-                throw new DomainException("Vehicle's description cannot be empty.");
+                throw new InvalidVehicleDescriptionException(description);
             }
 
             Description = description;
@@ -46,7 +46,7 @@ namespace Pacco.Services.Vehicles.Core.Entities
         {
             if (pricePerHour <= 0)
             {
-                throw  new DomainException("Vehicle's price per hour cannot be less/equal zero.");
+                throw  new InvalidVehiclePricePerHourException(pricePerHour);
             }
 
             PricePerHour = pricePerHour;

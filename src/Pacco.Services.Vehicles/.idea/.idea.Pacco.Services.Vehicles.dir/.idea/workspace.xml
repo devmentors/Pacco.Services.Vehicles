@@ -3,7 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="b067f37e-ca9f-4703-b16e-5b310c395302" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../../.idea/.idea.Pacco.Services.Vehicles/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/.idea.Pacco.Services.Vehicles/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pacco.Services.Vehicles.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Pacco.Services.Vehicles.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pacco.Services.Vehicles.Application/Commands/AddVehicle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Pacco.Services.Vehicles.Application/Commands/AddVehicle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pacco.Services.Vehicles.Application/Commands/DeleteVehicle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Pacco.Services.Vehicles.Application/Commands/DeleteVehicle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pacco.Services.Vehicles.Application/Commands/UpdateVehicle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Pacco.Services.Vehicles.Application/Commands/UpdateVehicle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pacco.Services.Vehicles.Infrastructure/Extensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Pacco.Services.Vehicles.Infrastructure/Extensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,7 +21,7 @@
         <entry file="file://$PROJECT_DIR$/Pacco.Services.Vehicles.csproj">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
             </state>
           </provider>
         </entry>
@@ -25,14 +29,14 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Program.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="27" column="39" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
+            <state relative-caret-position="210">
+              <caret line="27" column="38" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
               <folding>
-                <marker date="1560686461861" expanded="false" signature="6:714" ph="..." />
-                <marker date="1560686461861" expanded="true" signature="749:2483" ph="{...}" />
-                <marker date="1560686461861" expanded="true" signature="776:2481" ph="{...}" />
-                <marker date="1560686461861" expanded="true" signature="1450:2419" ph="{...}" />
-                <marker date="1560686461861" expanded="true" signature="1954:2119" ph="{...}" />
+                <marker date="1561047148122" expanded="false" signature="6:467" ph="..." />
+                <marker date="1561047148122" expanded="true" signature="502:2249" ph="{...}" />
+                <marker date="1561047148122" expanded="true" signature="529:2247" ph="{...}" />
+                <marker date="1561047148122" expanded="true" signature="1283:2185" ph="{...}" />
+                <marker date="1561047148122" expanded="true" signature="1720:1885" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -66,7 +70,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="1680" />
     <option name="height" value="1050" />
   </component>
@@ -76,7 +80,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AssemblyExplorer" />
       <pane id="FileSystemExplorer" />
       <pane id="SolutionExplorer">
         <subPane>
@@ -90,6 +93,7 @@
         </subPane>
         <option name="show-all-files" value="false" />
       </pane>
+      <pane id="AssemblyExplorer" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -157,11 +161,12 @@
       <workItem from="1560492563548" duration="4167000" />
       <workItem from="1560577252032" duration="276000" />
       <workItem from="1560948340872" duration="192000" />
+      <workItem from="1561108140326" duration="18000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4635000" />
+    <option name="totallyTimeSpent" value="4653000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -174,9 +179,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25579977" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25885227" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -222,24 +226,24 @@
     <entry file="file://$PROJECT_DIR$/Core/Entities/Vehicle.cs" />
     <entry file="file://$PROJECT_DIR$/Core/Exceptions/DomainException.cs" />
     <entry file="file://$PROJECT_DIR$/Core/Entities/Variants.cs" />
-    <entry file="file://$PROJECT_DIR$/Program.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="27" column="39" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
-          <folding>
-            <marker date="1560686461861" expanded="false" signature="6:714" ph="..." />
-            <marker date="1560686461861" expanded="true" signature="749:2483" ph="{...}" />
-            <marker date="1560686461861" expanded="true" signature="776:2481" ph="{...}" />
-            <marker date="1560686461861" expanded="true" signature="1450:2419" ph="{...}" />
-            <marker date="1560686461861" expanded="true" signature="1954:2119" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Pacco.Services.Vehicles.csproj">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="27" column="38" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
+          <folding>
+            <marker date="1561047148122" expanded="false" signature="6:467" ph="..." />
+            <marker date="1561047148122" expanded="true" signature="502:2249" ph="{...}" />
+            <marker date="1561047148122" expanded="true" signature="529:2247" ph="{...}" />
+            <marker date="1561047148122" expanded="true" signature="1283:2185" ph="{...}" />
+            <marker date="1561047148122" expanded="true" signature="1720:1885" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>

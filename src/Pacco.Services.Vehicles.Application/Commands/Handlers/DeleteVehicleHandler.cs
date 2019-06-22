@@ -1,25 +1,24 @@
 using System.Threading.Tasks;
 using Convey.CQRS.Commands;
-using Pacco.Services.Vehicles.Application.Commands;
 using Pacco.Services.Vehicles.Application.Events;
 using Pacco.Services.Vehicles.Application.Messaging;
 using Pacco.Services.Vehicles.Core.Exceptions;
 using Pacco.Services.Vehicles.Core.Repositories;
 
-namespace Pacco.Services.Vehicles.Application.Handlers
+namespace Pacco.Services.Vehicles.Application.Commands.Handlers
 {
-    internal class UpdateVehicleHandler : ICommandHandler<UpdateVehicle>
+    internal class DeleteVehicleHandler : ICommandHandler<DeleteVehicle>
     {
         private readonly IVehiclesRepository _repository;
         private readonly IMessageBroker _broker;
 
-        public UpdateVehicleHandler(IVehiclesRepository repository, IMessageBroker broker)
+        public DeleteVehicleHandler(IVehiclesRepository repository, IMessageBroker broker)
         {
             _repository = repository;
             _broker = broker;
         }
         
-        public async Task HandleAsync(UpdateVehicle command)
+        public async Task HandleAsync(DeleteVehicle command)
         {
             var vehicle = await _repository.GetAsync(command.Id);
 
@@ -28,13 +27,8 @@ namespace Pacco.Services.Vehicles.Application.Handlers
                 throw new DomainException($"Vehicle with {command.Id} Id not found");
             }
             
-            vehicle.ChangeDescription(command.Description);
-            vehicle.ChangePricePerHour(command.PricePerHour);
-            vehicle.ChangeVariants(command.Variants);
-
-            await _repository.UpdateAsync(vehicle);
-            await _broker.PublishAsync(new VehicleUpdated(command.Id));
-
+            await _repository.DeleteAsync(vehicle);
+            await _broker.PublishAsync(new VehicleDeleted(command.Id));
         }
     }
 }

@@ -1,12 +1,11 @@
 using System.Threading.Tasks;
 using Convey.CQRS.Commands;
-using Pacco.Services.Vehicles.Application.Commands;
 using Pacco.Services.Vehicles.Application.Events;
 using Pacco.Services.Vehicles.Application.Messaging;
 using Pacco.Services.Vehicles.Core.Entities;
 using Pacco.Services.Vehicles.Core.Repositories;
 
-namespace Pacco.Services.Vehicles.Application.Handlers
+namespace Pacco.Services.Vehicles.Application.Commands.Handlers
 {
     internal class AddVehicleHandler : ICommandHandler<AddVehicle>
     {

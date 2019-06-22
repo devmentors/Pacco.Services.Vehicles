@@ -28,6 +28,11 @@
         <e p="Commands" t="Include">
           <e p="AddVehicle.cs" t="Include" />
           <e p="DeleteVehicle.cs" t="Include" />
+          <e p="Handlers" t="Include">
+            <e p="AddVehicleHandler.cs" t="Include" />
+            <e p="DeleteVehicleHandler.cs" t="Include" />
+            <e p="UpdateVehicleHandler.cs" t="Include" />
+          </e>
           <e p="UpdateVehicle.cs" t="Include" />
         </e>
         <e p="DTO" t="Include">
@@ -42,11 +47,6 @@
           <e p="VehicleUpdated.cs" t="Include" />
         </e>
         <e p="Extensions.cs" t="Include" />
-        <e p="Handlers" t="Include">
-          <e p="AddVehicleHandler.cs" t="Include" />
-          <e p="DeleteVehicleHandler.cs" t="Include" />
-          <e p="UpdateVehicleHandler.cs" t="Include" />
-        </e>
         <e p="Messaging" t="Include">
           <e p="IMessageBroker.cs" t="Include" />
         </e>
@@ -65,11 +65,16 @@
       <e p="src/Pacco.Services.Vehicles.Core" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="Entities" t="Include">
+          <e p="AggregateId.cs" t="Include" />
           <e p="Variants.cs" t="Include" />
           <e p="Vehicle.cs" t="Include" />
         </e>
         <e p="Exceptions" t="Include">
           <e p="DomainException.cs" t="Include" />
+          <e p="ExceptionBase.cs" t="Include" />
+          <e p="InvalidAggregateIdException.cs" t="Include" />
+          <e p="InvalidVehicleDescriptionException.cs" t="Include" />
+          <e p="InvalidVehiclePricePerHourException.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">

@@ -8,6 +8,11 @@ namespace Pacco.Services.Vehicles.Application.Commands
     {
         public Guid Id { get; }
 
+        public DeleteVehicle()
+        {
+            
+        }
+        
         [JsonConstructor]
         public DeleteVehicle(Guid id)
             => Id = id;

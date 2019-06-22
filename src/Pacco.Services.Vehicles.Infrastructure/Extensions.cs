@@ -1,7 +1,6 @@
 using System;
 using Convey;
 using Convey.CQRS.Queries;
-using Convey.MessageBrokers;
 using Convey.MessageBrokers.CQRS;
 using Convey.MessageBrokers.RabbitMQ;
 using Convey.Persistence.MongoDB;
@@ -22,7 +21,9 @@ namespace Pacco.Services.Vehicles.Infrastructure
         {
             builder.Services.AddTransient<IVehiclesRepository, VehiclesMongoRepository>();
             builder.Services.AddTransient<IMessageBroker, MessageBroker>();
-            
+
+            builder.AddInitializer<IMongoDbInitializer>();
+
             return builder
                 .AddMongo()
                 .AddMongoRepository<VehicleDocument, Guid>("Vehicles")

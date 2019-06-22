@@ -25,6 +25,7 @@ namespace Pacco.Services.Vehicles
                     .AddInfrastructure()
                     .AddWebApi())
                 .Configure(app => app
+                    .UseInitializers()
                     .UseInfrastructure()
                     .UseErrorHandler()
                     .UsePublicContracts()
