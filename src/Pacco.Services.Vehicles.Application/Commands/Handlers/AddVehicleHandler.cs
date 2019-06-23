@@ -7,7 +7,7 @@ using Pacco.Services.Vehicles.Core.Repositories;
 
 namespace Pacco.Services.Vehicles.Application.Commands.Handlers
 {
-    public class AddVehicleHandler : ICommandHandler<AddVehicle>
+    internal class AddVehicleHandler : ICommandHandler<AddVehicle>
     {
         private readonly IVehiclesRepository _repository;
         private readonly IMessageBroker _broker;
