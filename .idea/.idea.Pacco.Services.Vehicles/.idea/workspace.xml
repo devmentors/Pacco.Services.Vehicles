@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8e814e5b-c9ed-4d7b-aa4a-414ad38aa0fb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Pacco.Services.Vehicles.Infrastructure/Extensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pacco.Services.Vehicles.Infrastructure/Extensions.cs" afterDir="false" />
-    </list>
+    <list default="true" id="8e814e5b-c9ed-4d7b-aa4a-414ad38aa0fb" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,136 +10,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Pacco.Services.Vehicles.Infrastructure/Extensions.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="41" column="28" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
-              <folding>
-                <marker date="1561295750197" expanded="true" signature="6:754" ph="..." />
-                <marker date="1561295750197" expanded="true" signature="804:2139" ph="{...}" />
-                <marker date="1561295750197" expanded="true" signature="841:2137" ph="{...}" />
-                <marker date="1561295750197" expanded="true" signature="931:1406" ph="{...}" />
-                <marker date="1561295750197" expanded="true" signature="1497:2131" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/EAF227B7-237F-41DF-87E7-7F356DB151EE/8d/6f97a031/Extensions.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="41" column="23" lean-forward="true" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5B012415-8990-4EFF-AED1-0C64A5DB83DB/f6/6ddefb03/IBusSubscriber.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/438E64FD-BC2C-4425-B24C-C6EC61F4E6CB/94/873cdfa3/BusSubscriber.cs">
+        <entry file="file://$PROJECT_DIR$/src/Pacco.Services.Vehicles/Pacco.Services.Vehicles.csproj">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="438">
-              <caret line="96" column="60" lean-forward="true" selection-start-line="96" selection-start-column="60" selection-end-line="96" selection-end-column="60" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Pacco.Services.Vehicles.Application/Commands/Handlers/AddVehicleHandler.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
-              <folding>
-                <marker date="1561215408072" expanded="true" signature="6:254" ph="..." />
-                <marker date="1561215408072" expanded="true" signature="386:1161" ph="{...}" />
-                <marker date="1561215408072" expanded="true" signature="588:676" ph="{...}" />
-                <marker date="1561215408072" expanded="true" signature="735:1155" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Pacco.Services.Vehicles.Infrastructure/IoC/Extensions.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
-              <folding>
-                <marker date="1561215805354" expanded="true" signature="6:273" ph="..." />
-                <marker date="1561215805354" expanded="true" signature="327:1916" ph="{...}" />
-                <marker date="1561215805354" expanded="true" signature="366:1914" ph="{...}" />
-                <marker date="1561215805354" expanded="true" signature="466:1278" ph="{...}" />
-                <marker date="1561215805354" expanded="true" signature="949:1236" ph="{...}" />
-                <marker date="1561215805354" expanded="true" signature="1356:1908" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Pacco.Services.Vehicles.Infrastructure/IoC/CommandHandlerExceptionDecorator.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" selection-start-line="22" selection-end-line="22" />
-              <folding>
-                <marker date="1561215833361" expanded="true" signature="6:124" ph="..." />
-                <marker date="1561215833361" expanded="true" signature="178:817" ph="{...}" />
-                <marker date="1561215833361" expanded="true" signature="301:815" ph="{...}" />
-                <marker date="1561215833361" expanded="true" signature="559:809" ph="{...}" />
-                <marker date="1561215833361" expanded="true" signature="585:666" ph="{...}" />
-                <marker date="1561215833361" expanded="true" signature="703:799" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Library/Preferences/Rider2018.3/resharper-host/DecompilerCache/decompiler/B6775149-F218-4603-A63E-F2F651D9E73B/59/8bef6da8/ExceptionDispatchInfo.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="79" column="36" lean-forward="true" selection-start-line="79" selection-start-column="36" selection-end-line="79" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Pacco.Services.Vehicles.Application/Commands/AddVehicle.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
-              <folding>
-                <marker date="1561047252781" expanded="true" signature="6:109" ph="..." />
-                <marker date="1561047252781" expanded="true" signature="165:1016" ph="{...}" />
-                <marker date="1561047252781" expanded="true" signature="206:1014" ph="{...}" />
-                <marker date="1561047252781" expanded="true" signature="524:557" ph="{...}" />
-                <marker date="1561047252781" expanded="true" signature="753:1008" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Pacco.Services.Vehicles.Application/Commands/Handlers/UpdateVehicleHandler.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="30" column="61" selection-start-line="30" selection-start-column="61" selection-end-line="30" selection-end-column="61" />
-              <folding>
-                <marker date="1561209861064" expanded="false" signature="6:256" ph="..." />
-                <marker date="1561209861064" expanded="true" signature="321:1294" ph="{...}" />
-                <marker date="1561209861064" expanded="true" signature="396:1292" ph="{...}" />
-                <marker date="1561209861064" expanded="true" signature="601:689" ph="{...}" />
-                <marker date="1561209861064" expanded="true" signature="759:1286" ph="{...}" />
-                <marker date="1561209861064" expanded="true" signature="869:961" ph="{...}" />
-              </folding>
+            <state relative-caret-position="225">
+              <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -303,41 +176,6 @@
               <item name="" type="784c90a0:SolutionExplorerRootNode" />
               <item name="Pacco.Services.Vehicles" type="24d0babc:SolutionExplorerModelNode" />
             </path>
-            <path>
-              <item name="" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="Pacco.Services.Vehicles" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Pacco.Services.Vehicles.Application" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="Pacco.Services.Vehicles" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Pacco.Services.Vehicles.Application" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Commands" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="Pacco.Services.Vehicles" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Pacco.Services.Vehicles.Application" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Commands" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Handlers" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="Pacco.Services.Vehicles" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Pacco.Services.Vehicles.Infrastructure" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="Pacco.Services.Vehicles" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Pacco.Services.Vehicles.Infrastructure" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="IoC" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="Pacco.Services.Vehicles" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Pacco.Services.Vehicles.Infrastructure" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Mongo" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -436,7 +274,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45899000" />
+    <option name="totallyTimeSpent" value="46483000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -449,7 +287,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25885227" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -913,13 +750,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Pacco.Services.Vehicles/Pacco.Services.Vehicles.csproj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Pacco.Services.Vehicles.Core/Exceptions/DomainException.cs" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/E5593CE4-5F1D-43CB-9F8A-6E750BB645F9/2/ServiceCollectionExtensions.Decoration.cs">
       <provider selected="true" editor-type-id="text-editor">
@@ -933,7 +763,6 @@
         <state relative-caret-position="60">
           <caret line="4" column="41" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="41" />
           <folding>
-            <marker date="1561209842060" expanded="true" signature="95:354" ph="{...}" />
             <marker date="1561209842060" expanded="true" signature="155:352" ph="{...}" />
             <marker date="1561209842060" expanded="true" signature="326:346" ph="{...}" />
           </folding>
@@ -945,7 +774,6 @@
         <state relative-caret-position="60">
           <caret line="4" selection-start-line="4" selection-end-line="9" selection-end-column="9" />
           <folding>
-            <marker date="1561209080909" expanded="true" signature="49:375" ph="{...}" />
             <marker date="1561209080909" expanded="true" signature="120:373" ph="{...}" />
             <marker date="1561209080909" expanded="true" signature="347:367" ph="{...}" />
           </folding>
@@ -964,7 +792,6 @@
         <state relative-caret-position="180">
           <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
           <folding>
-            <marker date="1561208559107" expanded="true" signature="64:262" ph="{...}" />
             <marker date="1561208559107" expanded="true" signature="118:260" ph="{...}" />
             <marker date="1561208559107" expanded="true" signature="234:254" ph="{...}" />
           </folding>
@@ -977,7 +804,6 @@
           <caret line="26" selection-start-line="26" selection-end-line="27" />
           <folding>
             <marker date="1561209852387" expanded="true" signature="6:256" ph="..." />
-            <marker date="1561209852387" expanded="true" signature="321:1116" ph="{...}" />
             <marker date="1561209852387" expanded="true" signature="396:1114" ph="{...}" />
             <marker date="1561209852387" expanded="true" signature="601:689" ph="{...}" />
             <marker date="1561209852387" expanded="true" signature="759:1108" ph="{...}" />
@@ -992,7 +818,6 @@
           <caret line="30" column="61" selection-start-line="30" selection-start-column="61" selection-end-line="30" selection-end-column="61" />
           <folding>
             <marker date="1561209861064" expanded="false" signature="6:256" ph="..." />
-            <marker date="1561209861064" expanded="true" signature="321:1294" ph="{...}" />
             <marker date="1561209861064" expanded="true" signature="396:1292" ph="{...}" />
             <marker date="1561209861064" expanded="true" signature="601:689" ph="{...}" />
             <marker date="1561209861064" expanded="true" signature="759:1286" ph="{...}" />
@@ -1007,7 +832,6 @@
           <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
           <folding>
             <marker date="1561047252781" expanded="true" signature="6:109" ph="..." />
-            <marker date="1561047252781" expanded="true" signature="165:1016" ph="{...}" />
             <marker date="1561047252781" expanded="true" signature="206:1014" ph="{...}" />
             <marker date="1561047252781" expanded="true" signature="524:557" ph="{...}" />
             <marker date="1561047252781" expanded="true" signature="753:1008" ph="{...}" />
@@ -1028,13 +852,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Pacco.Services.Vehicles.Infrastructure/IoC/IDecoratorCommandHandler.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Pacco.Services.Vehicles.Infrastructure/IoC/IDecoratorCommandHandler.cs" />
     <entry file="file://$USER_HOME$/Library/Preferences/Rider2018.3/resharper-host/DecompilerCache/decompiler/B6775149-F218-4603-A63E-F2F651D9E73B/59/8bef6da8/ExceptionDispatchInfo.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="158">
@@ -1048,7 +866,6 @@
           <caret line="22" selection-start-line="22" selection-end-line="22" />
           <folding>
             <marker date="1561215833361" expanded="true" signature="6:124" ph="..." />
-            <marker date="1561215833361" expanded="true" signature="178:817" ph="{...}" />
             <marker date="1561215833361" expanded="true" signature="301:815" ph="{...}" />
             <marker date="1561215833361" expanded="true" signature="559:809" ph="{...}" />
             <marker date="1561215833361" expanded="true" signature="585:666" ph="{...}" />
@@ -1063,7 +880,6 @@
           <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
           <folding>
             <marker date="1561215805354" expanded="true" signature="6:273" ph="..." />
-            <marker date="1561215805354" expanded="true" signature="327:1916" ph="{...}" />
             <marker date="1561215805354" expanded="true" signature="366:1914" ph="{...}" />
             <marker date="1561215805354" expanded="true" signature="466:1278" ph="{...}" />
             <marker date="1561215805354" expanded="true" signature="949:1236" ph="{...}" />
@@ -1076,13 +892,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="41" column="28" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
-          <folding>
-            <marker date="1561295750197" expanded="true" signature="6:754" ph="..." />
-            <marker date="1561295750197" expanded="true" signature="804:2139" ph="{...}" />
-            <marker date="1561295750197" expanded="true" signature="841:2137" ph="{...}" />
-            <marker date="1561295750197" expanded="true" signature="931:1406" ph="{...}" />
-            <marker date="1561295750197" expanded="true" signature="1497:2131" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1104,6 +913,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="438">
           <caret line="96" column="60" lean-forward="true" selection-start-line="96" selection-start-column="60" selection-end-line="96" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Pacco.Services.Vehicles/Pacco.Services.Vehicles.csproj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
         </state>
       </provider>
     </entry>

@@ -30,7 +30,7 @@ namespace Pacco.Services.Vehicles
                     .UseErrorHandler()
                     .UsePublicContracts()
                     .UseEndpoints(endpoints => endpoints
-                        .Get("", ctx => ctx.Response.WriteAsync("Welcome to Pacco Parcels Service!")))
+                        .Get("", ctx => ctx.Response.WriteAsync("Welcome to Pacco Vehicles Service!")))
                     .UseDispatcherEndpoints(endpoints =>
                     {
                         endpoints.Get<GetVehicles,PagedResult<VehicleDto>>("vehicles");
