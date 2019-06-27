@@ -13,7 +13,7 @@ namespace Pacco.Services.Vehicles.Infrastructure.Mongo.Documents
                 document.Description,
                 document.PayloadCapacity,
                 document.LoadingCapacity,
-                document.PricePerHour,
+                document.PricePerService,
                 document.Variants);
 
         public static async Task<Vehicle> AsEntityAsync(this Task<VehicleDocument> task)
@@ -28,7 +28,7 @@ namespace Pacco.Services.Vehicles.Infrastructure.Mongo.Documents
                 Description = entity.Description,
                 PayloadCapacity = entity.PayloadCapacity,
                 LoadingCapacity = entity.LoadingCapacity,
-                PricePerHour = entity.PricePerHour,
+                PricePerService = entity.PricePerService,
                 Variants = entity.Variants
             };
         

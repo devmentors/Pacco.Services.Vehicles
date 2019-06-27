@@ -11,7 +11,7 @@ namespace Pacco.Services.Vehicles.Application.DTO
         public string Description { get; set; }
         public double PayloadCapacity { get; set; }
         public double LoadingCapacity { get; set; }
-        public decimal PricePerHour { get; set; }
+        public decimal PricePerService { get; set; }
         public IEnumerable<string> Variants { get; set; }
     }
 }

@@ -30,7 +30,7 @@ namespace Pacco.Services.Vehicles.Infrastructure.Mongo.Queries.Handlers
                 Description = v.Description,
                 PayloadCapacity = v.PayloadCapacity,
                 LoadingCapacity = v.LoadingCapacity,
-                PricePerHour = v.PricePerHour,
+                PricePerService = v.PricePerService,
                 Variants = v.Variants.ToString().Split(',')
             });
         }

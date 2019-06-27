@@ -11,7 +11,7 @@ namespace Pacco.Services.Vehicles.Core.Entities
         public string Description { get; protected set; }
         public double PayloadCapacity { get; protected set; }
         public double LoadingCapacity { get; protected set; }
-        public decimal PricePerHour { get; protected set; }
+        public decimal PricePerService { get; protected set; }
         public Variants Variants { get; protected set; }
 
         public Vehicle(AggregateId id, string brand, string model, string description, double payloadCapacity,
@@ -21,8 +21,8 @@ namespace Pacco.Services.Vehicles.Core.Entities
             Brand = brand;
             Model = model;
             ChangeDescription(description);
-            PayloadCapacity = payloadCapacity;
-            LoadingCapacity = loadingCapacity;
+            PayloadCapacity = payloadCapacity > 0 ? payloadCapacity : throw new InvalidVehicleCapacity(payloadCapacity);
+            LoadingCapacity = loadingCapacity > 0 ? loadingCapacity : throw new InvalidVehicleCapacity(loadingCapacity);
             ChangePricePerHour(pricePerHour);
             AddVariants(Variants.Standard);
         }
@@ -51,7 +51,7 @@ namespace Pacco.Services.Vehicles.Core.Entities
                 throw  new InvalidVehiclePricePerHourException(pricePerHour);
             }
 
-            PricePerHour = pricePerHour;
+            PricePerService = pricePerHour;
         }
 
         public void ChangeVariants(Variants variants)
