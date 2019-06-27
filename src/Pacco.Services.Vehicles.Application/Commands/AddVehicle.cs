@@ -11,8 +11,8 @@ namespace Pacco.Services.Vehicles.Application.Commands
         public string Brand { get; }
         public string Model { get; }
         public string Description { get; }
-        public ushort PayloadCapacity { get; }
-        public ushort LoadingCapacity { get; }
+        public double PayloadCapacity { get; }
+        public double LoadingCapacity { get; }
         public decimal PricePerHour { get; }
         public Variants Variants { get; }
 
@@ -22,8 +22,8 @@ namespace Pacco.Services.Vehicles.Application.Commands
         }
         
         [JsonConstructor]
-        public AddVehicle(Guid id, string brand, string model, string description, ushort payloadCapacity, 
-            ushort loadingCapacity, decimal pricePerHour, Variants variants)
+        public AddVehicle(Guid id, string brand, string model, string description, double payloadCapacity, 
+            double loadingCapacity, decimal pricePerHour, Variants variants)
         {
             Id = id;
             Brand = brand;

@@ -9,7 +9,8 @@ namespace Pacco.Services.Vehicles.Application.DTO
         public string Brand { get; set; }
         public string Model { get; set; }
         public string Description { get; set; }
-        public ushort PayloadCapacity { get; set; }
+        public double PayloadCapacity { get; set; }
+        public double LoadingCapacity { get; set; }
         public decimal PricePerHour { get; set; }
         public IEnumerable<string> Variants { get; set; }
     }

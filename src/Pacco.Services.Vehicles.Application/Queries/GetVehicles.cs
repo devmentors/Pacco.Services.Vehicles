@@ -7,8 +7,8 @@ namespace Pacco.Services.Vehicles.Application.Queries
 {
     public class GetVehicles : PagedQueryBase, IQuery<PagedResult<VehicleDto>>
     {
-        public decimal PriceFrom { get; set; }
-        public decimal PriceTo { get; set; }
+        public double PayloadCapacity { get; set; }
+        public double LoadingCapacity { get; set; }
         public Variants Variants { get; set; }
     }
 }

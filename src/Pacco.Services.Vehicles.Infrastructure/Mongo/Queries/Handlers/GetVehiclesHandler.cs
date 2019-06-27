@@ -19,8 +19,8 @@ namespace Pacco.Services.Vehicles.Infrastructure.Mongo.Queries.Handlers
         
         public async Task<PagedResult<VehicleDto>> HandleAsync(GetVehicles query)
         {
-            var pagedResult = await  _repository.BrowseAsync(v => v.PricePerHour >= query.PriceFrom  
-                                                              &&  v.PricePerHour <= query.PriceTo && v.Variants == query.Variants, query);
+            var pagedResult = await  _repository.BrowseAsync(v => v.PayloadCapacity >= query.PayloadCapacity
+                              && v.LoadingCapacity >= query.LoadingCapacity && v.Variants == query.Variants, query);
 
             return pagedResult?.Map(v => new VehicleDto
             {
@@ -29,6 +29,7 @@ namespace Pacco.Services.Vehicles.Infrastructure.Mongo.Queries.Handlers
                 Model = v.Model,
                 Description = v.Description,
                 PayloadCapacity = v.PayloadCapacity,
+                LoadingCapacity = v.LoadingCapacity,
                 PricePerHour = v.PricePerHour,
                 Variants = v.Variants.ToString().Split(',')
             });
