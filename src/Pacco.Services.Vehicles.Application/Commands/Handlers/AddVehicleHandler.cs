@@ -26,6 +26,7 @@ namespace Pacco.Services.Vehicles.Application.Commands.Handlers
                 command.Model,
                 command.Description,
                 command.PayloadCapacity,
+                command.LoadingCapacity,
                 command.PricePerHour,
                 command.Variants);
 

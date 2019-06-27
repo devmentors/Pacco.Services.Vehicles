@@ -42,10 +42,6 @@ namespace Pacco.Services.Vehicles.Infrastructure
                 .SubscribeCommand<AddVehicle>((cmd, ex) => new AddVehicleRejected(cmd.Id, ex.Message, ex.Code))
                 .SubscribeCommand<UpdateVehicle>((cmd, ex) => new UpdateVehicleRejected(cmd.Id, ex.Message, ex.Code))
                 .SubscribeCommand<DeleteVehicle>((cmd, ex) => new DeletedVehicleRejected(cmd.Id, ex.Message, ex.Code));
-
-            var handler = app.ApplicationServices.GetService<IBusPublisher>();
-
-            handler.SendAsync(new AddVehicle(Guid.NewGuid(), "", "", "", 12, 12, Variants.Animal), CorrelationContext.Empty);
             
             return app;
         }

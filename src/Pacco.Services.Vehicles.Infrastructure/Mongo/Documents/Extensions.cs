@@ -12,6 +12,7 @@ namespace Pacco.Services.Vehicles.Infrastructure.Mongo.Documents
                 document.Model,
                 document.Description,
                 document.PayloadCapacity,
+                document.LoadingCapacity,
                 document.PricePerHour,
                 document.Variants);
 
@@ -26,6 +27,7 @@ namespace Pacco.Services.Vehicles.Infrastructure.Mongo.Documents
                 Model = entity.Model,
                 Description = entity.Description,
                 PayloadCapacity = entity.PayloadCapacity,
+                LoadingCapacity = entity.LoadingCapacity,
                 PricePerHour = entity.PricePerHour,
                 Variants = entity.Variants
             };

@@ -10,24 +10,26 @@ namespace Pacco.Services.Vehicles.Core.Entities
         public string Model { get; protected set; }
         public string Description { get; protected set; }
         public ushort PayloadCapacity { get; protected set; }
+        public ushort LoadingCapacity { get; protected set; }
         public decimal PricePerHour { get; protected set; }
         public Variants Variants { get; protected set; }
 
         public Vehicle(AggregateId id, string brand, string model, string description, ushort payloadCapacity,
-            decimal pricePerHour)
+            ushort loadingCapacity, decimal pricePerHour)
         {
             Id = id;
             Brand = brand;
             Model = model;
             ChangeDescription(description);
             PayloadCapacity = payloadCapacity;
+            LoadingCapacity = loadingCapacity;
             ChangePricePerHour(pricePerHour);
             AddVariants(Variants.Standard);
         }
         
         public Vehicle(AggregateId id, string brand, string model, string description, ushort payloadCapacity,
-            decimal pricePerHour, params Variants[] variants) 
-            : this(id, brand, model, description, payloadCapacity, pricePerHour)
+            ushort loadingCapacity, decimal pricePerHour, params Variants[] variants) 
+            : this(id, brand, model, description, payloadCapacity, loadingCapacity, pricePerHour)
         {
             AddVariants(variants);
         }
