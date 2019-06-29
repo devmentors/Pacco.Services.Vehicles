@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Pacco.Services.Vehicles.Application.Commands;
 using Pacco.Services.Vehicles.Application.Events;
+using Pacco.Services.Vehicles.Application.Events.Rejected;
 using Pacco.Services.Vehicles.Application.Messaging;
 using Pacco.Services.Vehicles.Core.Entities;
 using Pacco.Services.Vehicles.Core.Repositories;
