@@ -27,7 +27,7 @@ namespace Pacco.Services.Vehicles.Application.Commands.Handlers
                 command.Description,
                 command.PayloadCapacity,
                 command.LoadingCapacity,
-                command.PricePerHour,
+                command.PricePerService,
                 command.Variants);
 
             await _repository.AddAsync(vehicle);

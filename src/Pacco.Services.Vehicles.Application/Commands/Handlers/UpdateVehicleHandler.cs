@@ -28,7 +28,7 @@ namespace Pacco.Services.Vehicles.Application.Commands.Handlers
             }
             
             vehicle.ChangeDescription(command.Description);
-            vehicle.ChangePricePerHour(command.PricePerHour);
+            vehicle.ChangePricePerService(command.PricePerHour);
             vehicle.ChangeVariants(command.Variants);
 
             await _repository.UpdateAsync(vehicle);

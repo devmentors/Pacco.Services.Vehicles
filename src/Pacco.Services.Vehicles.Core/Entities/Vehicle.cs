@@ -23,7 +23,7 @@ namespace Pacco.Services.Vehicles.Core.Entities
             ChangeDescription(description);
             PayloadCapacity = payloadCapacity > 0 ? payloadCapacity : throw new InvalidVehicleCapacity(payloadCapacity);
             LoadingCapacity = loadingCapacity > 0 ? loadingCapacity : throw new InvalidVehicleCapacity(loadingCapacity);
-            ChangePricePerHour(pricePerHour);
+            ChangePricePerService(pricePerHour);
             AddVariants(Variants.Standard);
         }
         
@@ -44,14 +44,14 @@ namespace Pacco.Services.Vehicles.Core.Entities
             Description = description;
         }
 
-        public void ChangePricePerHour(decimal pricePerHour)
+        public void ChangePricePerService(decimal pricePerService)
         {
-            if (pricePerHour <= 0)
+            if (pricePerService <= 0)
             {
-                throw  new InvalidVehiclePricePerHourException(pricePerHour);
+                throw  new InvalidVehiclePricePerHourException(pricePerService);
             }
 
-            PricePerService = pricePerHour;
+            PricePerService = pricePerService;
         }
 
         public void ChangeVariants(Variants variants)
