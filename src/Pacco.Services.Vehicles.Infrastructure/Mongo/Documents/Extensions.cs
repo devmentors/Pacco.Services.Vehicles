@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using Pacco.Services.Vehicles.Application.DTO;
 using Pacco.Services.Vehicles.Core.Entities;
 
 namespace Pacco.Services.Vehicles.Infrastructure.Mongo.Documents
@@ -34,5 +35,18 @@ namespace Pacco.Services.Vehicles.Infrastructure.Mongo.Documents
         
         public static async Task<VehicleDocument> AsDocumentAsync(this Task<Vehicle> task)
             => (await task).AsDocument();
+
+        public static VehicleDto AsDto(this VehicleDocument document)
+            => new VehicleDto
+            {
+                Id = document.Id,
+                Brand = document.Brand,
+                Model = document.Model,
+                Description = document.Description,
+                PayloadCapacity = document.PayloadCapacity,
+                LoadingCapacity = document.LoadingCapacity,
+                PricePerService = document.PricePerService,
+                Variants = document.Variants.ToString().Split(',')
+            };
     }
 }

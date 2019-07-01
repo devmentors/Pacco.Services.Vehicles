@@ -33,11 +33,10 @@ namespace Pacco.Services.Vehicles
                         .Get("", ctx => ctx.Response.WriteAsync("Welcome to Pacco Vehicles Service!")))
                     .UseDispatcherEndpoints(endpoints =>
                     {
-                        endpoints.Get<GetVehicles,PagedResult<VehicleDto>>("vehicles");
-
+                        endpoints.Get<GetVehicle,VehicleDto>("vehicles/{id}");
+                        endpoints.Get<SearchVehicles,PagedResult<VehicleDto>>("vehicles");
                         endpoints.Post<AddVehicle>("vehicles",
                             afterDispatch: (cmd, ctx) => ctx.Response.Created($"vehicles/{cmd.Id}"));
-                        
                         endpoints.Put<UpdateVehicle>("vehicles/{id}",
                             beforeDispatch: (cmd, ctx) =>
                             {
@@ -45,7 +44,6 @@ namespace Pacco.Services.Vehicles
                                 return Task.CompletedTask;
                             },
                             afterDispatch: (cmd, ctx) => ctx.Response.Created($"vehicles/{cmd.Id}"));
-                        
                         endpoints.Delete("vehicles/{id}",
                             ctx => ctx.SendAsync(new DeleteVehicle(ctx.Args<Guid>("id"))));
                     }))

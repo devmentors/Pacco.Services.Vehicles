@@ -5,7 +5,7 @@ using Pacco.Services.Vehicles.Core.Entities;
 
 namespace Pacco.Services.Vehicles.Application.Queries
 {
-    public class GetVehicles : PagedQueryBase, IQuery<PagedResult<VehicleDto>>
+    public class SearchVehicles : PagedQueryBase, IQuery<PagedResult<VehicleDto>>
     {
         public double PayloadCapacity { get; set; }
         public double LoadingCapacity { get; set; }
