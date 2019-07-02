@@ -5,7 +5,7 @@ namespace Pacco.Services.Vehicles.Core.Entities
 {
     public class Vehicle
     {
-        public AggregateId Id { get; protected set; }
+        public Guid Id { get; protected set; }
         public string Brand { get; protected set; }
         public string Model { get; protected set; }
         public string Description { get; protected set; }
@@ -14,7 +14,7 @@ namespace Pacco.Services.Vehicles.Core.Entities
         public decimal PricePerService { get; protected set; }
         public Variants Variants { get; protected set; }
 
-        public Vehicle(AggregateId id, string brand, string model, string description, double payloadCapacity,
+        public Vehicle(Guid id, string brand, string model, string description, double payloadCapacity,
             double loadingCapacity, decimal pricePerHour)
         {
             Id = id;
@@ -27,7 +27,7 @@ namespace Pacco.Services.Vehicles.Core.Entities
             AddVariants(Variants.Standard);
         }
         
-        public Vehicle(AggregateId id, string brand, string model, string description, double payloadCapacity,
+        public Vehicle(Guid id, string brand, string model, string description, double payloadCapacity,
             double loadingCapacity, decimal pricePerHour, params Variants[] variants) 
             : this(id, brand, model, description, payloadCapacity, loadingCapacity, pricePerHour)
         {

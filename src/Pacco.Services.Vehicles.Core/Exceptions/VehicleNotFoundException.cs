@@ -1,4 +1,4 @@
-using Pacco.Services.Vehicles.Core.Entities;
+using System;
 
 namespace Pacco.Services.Vehicles.Core.Exceptions
 {
@@ -6,7 +6,7 @@ namespace Pacco.Services.Vehicles.Core.Exceptions
     {
         public override string Code => "vehicle_not_found";
 
-        public VehicleNotFoundException(AggregateId id)
+        public VehicleNotFoundException(Guid id)
             : base($"Vehicle not found: {id}.")
         {
         }
