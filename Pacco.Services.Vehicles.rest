@@ -12,7 +12,6 @@ POST {{url}}/vehicles
 Content-Type: application/json
 
 {
-  "id": "{{vehicleId}}",
   "brand": "Brand",
   "model": "Model",
   "description": "Vehicle description",
