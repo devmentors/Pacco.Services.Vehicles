@@ -3,6 +3,7 @@ using Convey.CQRS.Events;
 
 namespace Pacco.Services.Vehicles.Application.Events
 {
+    [Contract]
     public class VehicleDeleted : IEvent
     {
         public Guid Id { get; }

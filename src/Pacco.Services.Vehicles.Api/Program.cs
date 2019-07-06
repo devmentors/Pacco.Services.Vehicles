@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using Convey;
 using Convey.CQRS.Queries;
+using Convey.Logging;
 using Convey.WebApi;
 using Convey.WebApi.CQRS;
 using Microsoft.AspNetCore;
@@ -21,32 +22,28 @@ namespace Pacco.Services.Vehicles
             => await WebHost.CreateDefaultBuilder(args)
                 .ConfigureServices(services => services
                     .AddConvey()
+                    .AddWebApi()
                     .AddApplication()
                     .AddInfrastructure()
-                    .AddWebApi())
+                    .Build())
                 .Configure(app => app
-                    .UseInitializers()
                     .UseInfrastructure()
-                    .UseErrorHandler()
-                    .UsePublicContracts()
-                    .UseEndpoints(endpoints => endpoints
-                        .Get("", ctx => ctx.Response.WriteAsync("Welcome to Pacco Vehicles Service!")))
-                    .UseDispatcherEndpoints(endpoints =>
-                    {
-                        endpoints.Get<GetVehicle,VehicleDto>("vehicles/{id}");
-                        endpoints.Get<SearchVehicles,PagedResult<VehicleDto>>("vehicles");
-                        endpoints.Post<AddVehicle>("vehicles",
-                            afterDispatch: (cmd, ctx) => ctx.Response.Created($"vehicles/{cmd.Id}"));
-                        endpoints.Put<UpdateVehicle>("vehicles/{id}",
-                            beforeDispatch: (cmd, ctx) =>
+                    .UseDispatcherEndpoints(endpoints => endpoints
+                        .Get("", ctx => ctx.Response.WriteAsync("Welcome to Pacco Vehicles Service!"))
+                        .Get<GetVehicle, VehicleDto>("vehicles/{id}")
+                        .Get<SearchVehicles, PagedResult<VehicleDto>>("vehicles")
+                        .Post<AddVehicle>("vehicles",
+                            afterDispatch: (cmd, ctx) => ctx.Response.Created($"vehicles/{cmd.Id}"))
+                        .Put<UpdateVehicle>("vehicles/{id}",
+                            (cmd, ctx) =>
                             {
                                 cmd.Bind(c => c.Id, ctx.Args<Guid>("id"));
                                 return Task.CompletedTask;
                             },
-                            afterDispatch: (cmd, ctx) => ctx.Response.Created($"vehicles/{cmd.Id}"));
-                        endpoints.Delete("vehicles/{id}",
-                            ctx => ctx.SendAsync(new DeleteVehicle(ctx.Args<Guid>("id"))));
-                    }))
+                            (cmd, ctx) => ctx.Response.Created($"vehicles/{cmd.Id}"))
+                        .Delete<DeleteVehicle>("vehicles/{id}")
+                    ))
+                .UseLogging()
                 .Build()
                 .RunAsync();
     }

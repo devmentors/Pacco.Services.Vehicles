@@ -3,6 +3,7 @@ using Convey.CQRS.Events;
 
 namespace Pacco.Services.Vehicles.Application.Events.Rejected
 {
+    [Contract]
     public class UpdateVehicleRejected : IRejectedEvent
     {
         public Guid Id { get; }

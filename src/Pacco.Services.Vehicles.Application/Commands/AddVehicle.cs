@@ -1,10 +1,10 @@
 using System;
 using Convey.CQRS.Commands;
-using Newtonsoft.Json;
 using Pacco.Services.Vehicles.Core.Entities;
 
 namespace Pacco.Services.Vehicles.Application.Commands
 {
+    [Contract]
     public class AddVehicle : ICommand
     {
         public Guid Id { get; }
@@ -15,17 +15,11 @@ namespace Pacco.Services.Vehicles.Application.Commands
         public double LoadingCapacity { get; }
         public decimal PricePerService { get; }
         public Variants Variants { get; }
-
-        public AddVehicle()
-        {
-            
-        }
         
-        [JsonConstructor]
         public AddVehicle(Guid id, string brand, string model, string description, double payloadCapacity, 
             double loadingCapacity, decimal pricePerService, Variants variants)
         {
-            Id = id;
+            Id = id == Guid.Empty ? Guid.NewGuid() : id;
             Brand = brand;
             Model = model;
             Description = description;

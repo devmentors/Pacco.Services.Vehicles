@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using Convey.CQRS.Queries;
 using Pacco.Services.Vehicles.Application.DTO;
 using Pacco.Services.Vehicles.Core.Entities;

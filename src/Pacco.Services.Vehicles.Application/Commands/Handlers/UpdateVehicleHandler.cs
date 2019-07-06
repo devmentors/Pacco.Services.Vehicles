@@ -17,7 +17,7 @@ namespace Pacco.Services.Vehicles.Application.Commands.Handlers
             _repository = repository;
             _broker = broker;
         }
-        
+
         public async Task HandleAsync(UpdateVehicle command)
         {
             var vehicle = await _repository.GetAsync(command.Id);
@@ -26,14 +26,13 @@ namespace Pacco.Services.Vehicles.Application.Commands.Handlers
             {
                 throw new VehicleNotFoundException(command.Id);
             }
-            
+
             vehicle.ChangeDescription(command.Description);
-            vehicle.ChangePricePerService(command.PricePerHour);
+            vehicle.ChangePricePerService(command.PricePerService);
             vehicle.ChangeVariants(command.Variants);
 
             await _repository.UpdateAsync(vehicle);
             await _broker.PublishAsync(new VehicleUpdated(command.Id));
-
         }
     }
 }
