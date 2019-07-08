@@ -14,7 +14,7 @@ using Pacco.Services.Vehicles.Application.DTO;
 using Pacco.Services.Vehicles.Application.Queries;
 using Pacco.Services.Vehicles.Infrastructure;
 
-namespace Pacco.Services.Vehicles
+namespace Pacco.Services.Vehicles.Api
 {
     public class Program
     {
