@@ -53,6 +53,7 @@ namespace Pacco.Services.Vehicles.Infrastructure
         {
             app.UseErrorHandler()
                 .UseVault()
+                .UseJaeger()
                 .UseInitializers()
                 .UsePublicContracts<ContractAttribute>()
                 .UseConsul()
