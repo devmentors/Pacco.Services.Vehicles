@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Convey;
+using Convey.Configurations.Vault;
 using Convey.CQRS.Queries;
 using Convey.Logging;
+using Convey.Types;
 using Convey.WebApi;
 using Convey.WebApi.CQRS;
 using Microsoft.AspNetCore;
@@ -31,7 +33,7 @@ namespace Pacco.Services.Vehicles.Api
                 .Configure(app => app
                     .UseInfrastructure()
                     .UseDispatcherEndpoints(endpoints => endpoints
-                        .Get("", ctx => ctx.Response.WriteAsync("Welcome to Pacco Vehicles Service!"))
+                        .Get("", ctx => ctx.Response.WriteAsync(ctx.RequestServices.GetService<AppOptions>().Name))
                         .Get<GetVehicle, VehicleDto>("vehicles/{id}")
                         .Get<SearchVehicles, PagedResult<VehicleDto>>("vehicles")
                         .Post<AddVehicle>("vehicles",
@@ -46,6 +48,7 @@ namespace Pacco.Services.Vehicles.Api
                         .Delete<DeleteVehicle>("vehicles/{id}")
                     ))
                 .UseLogging()
+                .UseVault()
                 .Build()
                 .RunAsync();
     }
