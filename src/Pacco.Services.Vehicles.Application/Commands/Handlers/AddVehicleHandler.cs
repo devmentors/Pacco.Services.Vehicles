@@ -21,7 +21,7 @@ namespace Pacco.Services.Vehicles.Application.Commands.Handlers
         public async Task HandleAsync(AddVehicle command)
         {
             var vehicle = new Vehicle(
-                command.Id,
+                command.VehicleId,
                 command.Brand,
                 command.Model,
                 command.Description,
@@ -31,7 +31,7 @@ namespace Pacco.Services.Vehicles.Application.Commands.Handlers
                 command.Variants);
 
             await _repository.AddAsync(vehicle);
-            await _broker.PublishAsync(new VehicleAdded(command.Id));
+            await _broker.PublishAsync(new VehicleAdded(command.VehicleId));
         }
     }
 }

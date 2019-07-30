@@ -6,6 +6,6 @@ namespace Pacco.Services.Vehicles.Application.Queries
 {
     public class GetVehicle : IQuery<VehicleDto>
     {
-        public Guid Id { get; set; }
+        public Guid VehicleId { get; set; }
     }
 }

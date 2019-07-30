@@ -7,7 +7,7 @@ namespace Pacco.Services.Vehicles.Application.Commands
     [Contract]
     public class AddVehicle : ICommand
     {
-        public Guid Id { get; }
+        public Guid VehicleId { get; }
         public string Brand { get; }
         public string Model { get; }
         public string Description { get; }
@@ -16,10 +16,10 @@ namespace Pacco.Services.Vehicles.Application.Commands
         public decimal PricePerService { get; }
         public Variants Variants { get; }
         
-        public AddVehicle(Guid id, string brand, string model, string description, double payloadCapacity, 
+        public AddVehicle(Guid vehicleId, string brand, string model, string description, double payloadCapacity, 
             double loadingCapacity, decimal pricePerService, Variants variants)
         {
-            Id = id == Guid.Empty ? Guid.NewGuid() : id;
+            VehicleId = vehicleId == Guid.Empty ? Guid.NewGuid() : vehicleId;
             Brand = brand;
             Model = model;
             Description = description;

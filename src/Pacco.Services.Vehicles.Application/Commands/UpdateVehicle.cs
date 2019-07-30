@@ -7,14 +7,14 @@ namespace Pacco.Services.Vehicles.Application.Commands
     [Contract]
     public class UpdateVehicle : ICommand
     {
-        public Guid Id { get; }
+        public Guid VehicleId { get; }
         public string Description { get; }
         public decimal PricePerService { get; }
         public Variants Variants { get; }
 
-        public UpdateVehicle(Guid id,string description, decimal pricePerService, Variants variants)
+        public UpdateVehicle(Guid vehicleId,string description, decimal pricePerService, Variants variants)
         {
-            Id = id;
+            VehicleId = vehicleId;
             Description = description;
             PricePerService = pricePerService;
             Variants = variants;

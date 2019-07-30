@@ -17,7 +17,7 @@ namespace Pacco.Services.Vehicles.Infrastructure.Mongo.Queries.Handlers
         
         public async Task<VehicleDto> HandleAsync(GetVehicle query)
         {
-            var document = await _repository.GetAsync(v => v.Id == query.Id);
+            var document = await _repository.GetAsync(v => v.Id == query.VehicleId);
             return document?.AsDto();
         }
     }

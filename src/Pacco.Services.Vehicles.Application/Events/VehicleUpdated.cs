@@ -6,9 +6,9 @@ namespace Pacco.Services.Vehicles.Application.Events
     [Contract]
     public class VehicleUpdated : IEvent
     {
-        public Guid Id { get; }
+        public Guid VehicleId { get; }
 
         public VehicleUpdated(Guid id)
-            => Id = id;
+            => VehicleId = id;
     }
 }

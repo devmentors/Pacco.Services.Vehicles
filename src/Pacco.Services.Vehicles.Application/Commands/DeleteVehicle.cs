@@ -6,9 +6,9 @@ namespace Pacco.Services.Vehicles.Application.Commands
     [Contract]
     public class DeleteVehicle : ICommand
     {
-        public Guid Id { get; }
+        public Guid VehicleId { get; }
         
         public DeleteVehicle(Guid id)
-            => Id = id;
+            => VehicleId = id;
     }
 }

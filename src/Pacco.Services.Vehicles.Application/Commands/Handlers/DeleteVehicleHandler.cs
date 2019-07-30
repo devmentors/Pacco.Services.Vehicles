@@ -20,15 +20,15 @@ namespace Pacco.Services.Vehicles.Application.Commands.Handlers
         
         public async Task HandleAsync(DeleteVehicle command)
         {
-            var vehicle = await _repository.GetAsync(command.Id);
+            var vehicle = await _repository.GetAsync(command.VehicleId);
 
             if (vehicle is null)
             {
-                throw new VehicleNotFoundException(command.Id);
+                throw new VehicleNotFoundException(command.VehicleId);
             }
             
             await _repository.DeleteAsync(vehicle);
-            await _broker.PublishAsync(new VehicleDeleted(command.Id));
+            await _broker.PublishAsync(new VehicleDeleted(command.VehicleId));
         }
     }
 }

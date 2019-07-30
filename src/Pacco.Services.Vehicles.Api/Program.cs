@@ -1,5 +1,4 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Convey;
 using Convey.Configurations.Vault;
 using Convey.CQRS.Queries;
@@ -34,18 +33,12 @@ namespace Pacco.Services.Vehicles.Api
                     .UseInfrastructure()
                     .UseDispatcherEndpoints(endpoints => endpoints
                         .Get("", ctx => ctx.Response.WriteAsync(ctx.RequestServices.GetService<AppOptions>().Name))
-                        .Get<GetVehicle, VehicleDto>("vehicles/{id}")
+                        .Get<GetVehicle, VehicleDto>("vehicles/{vehicleId}")
                         .Get<SearchVehicles, PagedResult<VehicleDto>>("vehicles")
                         .Post<AddVehicle>("vehicles",
-                            afterDispatch: (cmd, ctx) => ctx.Response.Created($"vehicles/{cmd.Id}"))
-                        .Put<UpdateVehicle>("vehicles/{id}",
-                            (cmd, ctx) =>
-                            {
-                                cmd.Bind(c => c.Id, ctx.Args<Guid>("id"));
-                                return Task.CompletedTask;
-                            },
-                            (cmd, ctx) => ctx.Response.Created($"vehicles/{cmd.Id}"))
-                        .Delete<DeleteVehicle>("vehicles/{id}")
+                            afterDispatch: (cmd, ctx) => ctx.Response.Created($"vehicles/{cmd.VehicleId}"))
+                        .Put<UpdateVehicle>("vehicles/{vehicleId}")
+                        .Delete<DeleteVehicle>("vehicles/{vehicleId}")
                     ))
                 .UseLogging()
                 .UseVault()
