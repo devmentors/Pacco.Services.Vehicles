@@ -18,6 +18,7 @@ using Pacco.Services.Vehicles.Application;
 using Pacco.Services.Vehicles.Application.Commands;
 using Pacco.Services.Vehicles.Application.Messaging;
 using Pacco.Services.Vehicles.Core.Repositories;
+using Pacco.Services.Vehicles.Infrastructure.Contexts;
 using Pacco.Services.Vehicles.Infrastructure.Exceptions;
 using Pacco.Services.Vehicles.Infrastructure.Messaging;
 using Pacco.Services.Vehicles.Infrastructure.Mongo.Documents;
@@ -31,6 +32,8 @@ namespace Pacco.Services.Vehicles.Infrastructure
         {
             builder.Services.AddTransient<IVehiclesRepository, VehiclesMongoRepository>();
             builder.Services.AddTransient<IMessageBroker, MessageBroker>();
+            builder.Services.AddTransient<IAppContextFactory, AppContextFactory>();
+            builder.Services.AddTransient(ctx => ctx.GetRequiredService<IAppContextFactory>().Create());
 
             return builder
                 .AddQueryHandlers()
