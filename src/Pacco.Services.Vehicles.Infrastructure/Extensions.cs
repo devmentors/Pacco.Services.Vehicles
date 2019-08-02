@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using Convey;
 using Convey.CQRS.Queries;
 using Convey.Discovery.Consul;
@@ -13,16 +14,18 @@ using Convey.Tracing.Jaeger.RabbitMQ;
 using Convey.WebApi;
 using Convey.WebApi.CQRS;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
+using Newtonsoft.Json;
 using Pacco.Services.Vehicles.Application;
 using Pacco.Services.Vehicles.Application.Commands;
 using Pacco.Services.Vehicles.Application.Messaging;
 using Pacco.Services.Vehicles.Core.Repositories;
 using Pacco.Services.Vehicles.Infrastructure.Contexts;
 using Pacco.Services.Vehicles.Infrastructure.Exceptions;
-using Pacco.Services.Vehicles.Infrastructure.Messaging;
 using Pacco.Services.Vehicles.Infrastructure.Mongo.Documents;
 using Pacco.Services.Vehicles.Infrastructure.Mongo.Repositories;
+using Pacco.Services.Vehicles.Infrastructure.Services;
 
 namespace Pacco.Services.Vehicles.Infrastructure
 {
@@ -62,8 +65,13 @@ namespace Pacco.Services.Vehicles.Infrastructure
                 .SubscribeCommand<AddVehicle>()
                 .SubscribeCommand<UpdateVehicle>()
                 .SubscribeCommand<DeleteVehicle>();
-            
+
             return app;
         }
+
+        internal static CorrelationContext GetCorrelationContext(this IHttpContextAccessor accessor)
+            => accessor.HttpContext.Request.Headers.TryGetValue("Correlation-Context", out var json)
+                ? JsonConvert.DeserializeObject<CorrelationContext>(json.FirstOrDefault())
+                : null;
     }
 }
