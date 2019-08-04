@@ -1,5 +1,6 @@
 using System.Threading.Tasks;
 using Convey.CQRS.Commands;
+using Microsoft.Extensions.Logging;
 using Pacco.Services.Vehicles.Application.Events;
 using Pacco.Services.Vehicles.Application.Messaging;
 using Pacco.Services.Vehicles.Core.Entities;
@@ -11,11 +12,14 @@ namespace Pacco.Services.Vehicles.Application.Commands.Handlers
     {
         private readonly IVehiclesRepository _repository;
         private readonly IMessageBroker _broker;
+        private readonly ILogger<AddVehicleHandler> _logger;
 
-        public AddVehicleHandler(IVehiclesRepository repository, IMessageBroker broker)
+        public AddVehicleHandler(IVehiclesRepository repository, IMessageBroker broker,
+            ILogger<AddVehicleHandler> logger)
         {
             _repository = repository;
             _broker = broker;
+            _logger = logger;
         }
 
         public async Task HandleAsync(AddVehicle command)
@@ -32,6 +36,7 @@ namespace Pacco.Services.Vehicles.Application.Commands.Handlers
 
             await _repository.AddAsync(vehicle);
             await _broker.PublishAsync(new VehicleAdded(command.VehicleId));
+            _logger.LogInformation($"Added a vehicle with id: {command.VehicleId}.");
         }
     }
 }

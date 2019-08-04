@@ -28,7 +28,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Messaging" />
       <Folder Include="Mongo\Queries" />
     </ItemGroup>
 </Project>
