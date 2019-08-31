@@ -1,6 +1,5 @@
 using System.Threading.Tasks;
 using Convey.CQRS.Commands;
-using Microsoft.Extensions.Logging;
 using Pacco.Services.Vehicles.Application.Events;
 using Pacco.Services.Vehicles.Application.Messaging;
 using Pacco.Services.Vehicles.Core.Exceptions;
@@ -12,14 +11,11 @@ namespace Pacco.Services.Vehicles.Application.Commands.Handlers
     {
         private readonly IVehiclesRepository _repository;
         private readonly IMessageBroker _broker;
-        private readonly ILogger<DeleteVehicleHandler> _logger;
 
-        public DeleteVehicleHandler(IVehiclesRepository repository, IMessageBroker broker,
-            ILogger<DeleteVehicleHandler> logger)
+        public DeleteVehicleHandler(IVehiclesRepository repository, IMessageBroker broker)
         {
             _repository = repository;
             _broker = broker;
-            _logger = logger;
         }
         
         public async Task HandleAsync(DeleteVehicle command)
@@ -33,7 +29,6 @@ namespace Pacco.Services.Vehicles.Application.Commands.Handlers
             
             await _repository.DeleteAsync(vehicle);
             await _broker.PublishAsync(new VehicleDeleted(command.VehicleId));
-            _logger.LogInformation($"Deleted a vehicle with id: {command.VehicleId}.");
         }
     }
 }

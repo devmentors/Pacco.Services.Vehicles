@@ -1,6 +1,5 @@
 using System.Threading.Tasks;
 using Convey.CQRS.Commands;
-using Microsoft.Extensions.Logging;
 using Pacco.Services.Vehicles.Application.Events;
 using Pacco.Services.Vehicles.Application.Messaging;
 using Pacco.Services.Vehicles.Core.Exceptions;
@@ -12,14 +11,11 @@ namespace Pacco.Services.Vehicles.Application.Commands.Handlers
     {
         private readonly IVehiclesRepository _repository;
         private readonly IMessageBroker _broker;
-        private readonly ILogger<UpdateVehicleHandler> _logger;
 
-        public UpdateVehicleHandler(IVehiclesRepository repository, IMessageBroker broker,
-            ILogger<UpdateVehicleHandler> logger)
+        public UpdateVehicleHandler(IVehiclesRepository repository, IMessageBroker broker)
         {
             _repository = repository;
             _broker = broker;
-            _logger = logger;
         }
 
         public async Task HandleAsync(UpdateVehicle command)
@@ -36,7 +32,6 @@ namespace Pacco.Services.Vehicles.Application.Commands.Handlers
             vehicle.ChangeVariants(command.Variants);
             await _repository.UpdateAsync(vehicle);
             await _broker.PublishAsync(new VehicleUpdated(command.VehicleId));
-            _logger.LogInformation($"Updated a vehicle with id: {command.VehicleId}.");
         }
     }
 }

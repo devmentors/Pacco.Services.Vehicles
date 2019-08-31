@@ -23,6 +23,7 @@ using Pacco.Services.Vehicles.Application.Messaging;
 using Pacco.Services.Vehicles.Core.Repositories;
 using Pacco.Services.Vehicles.Infrastructure.Contexts;
 using Pacco.Services.Vehicles.Infrastructure.Exceptions;
+using Pacco.Services.Vehicles.Infrastructure.Logging;
 using Pacco.Services.Vehicles.Infrastructure.Mongo.Documents;
 using Pacco.Services.Vehicles.Infrastructure.Mongo.Repositories;
 using Pacco.Services.Vehicles.Infrastructure.Services;
@@ -50,6 +51,7 @@ namespace Pacco.Services.Vehicles.Infrastructure
                 .AddMetrics()
                 .AddJaeger()
                 .AddMongo()
+                .AddHandlersLogging()
                 .AddMongoRepository<VehicleDocument, Guid>("Vehicles");
         }
 
