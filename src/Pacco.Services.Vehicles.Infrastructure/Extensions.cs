@@ -15,6 +15,7 @@ using Convey.WebApi;
 using Convey.WebApi.CQRS;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Server.Kestrel.Core;
 using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json;
 using Pacco.Services.Vehicles.Application;
@@ -34,6 +35,7 @@ namespace Pacco.Services.Vehicles.Infrastructure
     {
         public static IConveyBuilder AddInfrastructure(this IConveyBuilder builder)
         {
+            builder.Services.Configure<KestrelServerOptions>(options => { options.AllowSynchronousIO = true; });
             builder.Services.AddTransient<IVehiclesRepository, VehiclesMongoRepository>();
             builder.Services.AddTransient<IMessageBroker, MessageBroker>();
             builder.Services.AddTransient<IAppContextFactory, AppContextFactory>();
