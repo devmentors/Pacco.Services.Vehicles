@@ -9,6 +9,7 @@ using Convey.MessageBrokers.CQRS;
 using Convey.MessageBrokers.RabbitMQ;
 using Convey.Metrics.AppMetrics;
 using Convey.Persistence.MongoDB;
+using Convey.Persistence.Redis;
 using Convey.Tracing.Jaeger;
 using Convey.Tracing.Jaeger.RabbitMQ;
 using Convey.WebApi;
@@ -35,7 +36,6 @@ namespace Pacco.Services.Vehicles.Infrastructure
     {
         public static IConveyBuilder AddInfrastructure(this IConveyBuilder builder)
         {
-            builder.Services.Configure<KestrelServerOptions>(options => { options.AllowSynchronousIO = true; });
             builder.Services.AddTransient<IVehiclesRepository, VehiclesMongoRepository>();
             builder.Services.AddTransient<IMessageBroker, MessageBroker>();
             builder.Services.AddTransient<IAppContextFactory, AppContextFactory>();
@@ -50,6 +50,7 @@ namespace Pacco.Services.Vehicles.Infrastructure
                 .AddRabbitMq(plugins: p => p.AddJaegerRabbitMqPlugin())
                 .AddExceptionToMessageMapper<ExceptionToMessageMapper>()
                 .AddMongo()
+                .AddRedis()
                 .AddMetrics()
                 .AddJaeger()
                 .AddMongo()
@@ -63,7 +64,6 @@ namespace Pacco.Services.Vehicles.Infrastructure
                 .UseJaeger()
                 .UseInitializers()
                 .UsePublicContracts<ContractAttribute>()
-                .UseConsul()
                 .UseMetrics()
                 .UseRabbitMq()
                 .SubscribeCommand<AddVehicle>()
