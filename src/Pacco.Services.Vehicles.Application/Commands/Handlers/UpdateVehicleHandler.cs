@@ -1,8 +1,8 @@
 using System.Threading.Tasks;
 using Convey.CQRS.Commands;
 using Pacco.Services.Vehicles.Application.Events;
+using Pacco.Services.Vehicles.Application.Exceptions;
 using Pacco.Services.Vehicles.Application.Messaging;
-using Pacco.Services.Vehicles.Core.Exceptions;
 using Pacco.Services.Vehicles.Core.Repositories;
 
 namespace Pacco.Services.Vehicles.Application.Commands.Handlers

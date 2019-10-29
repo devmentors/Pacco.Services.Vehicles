@@ -1,6 +1,7 @@
 using System;
+using Pacco.Services.Vehicles.Core.Exceptions;
 
-namespace Pacco.Services.Vehicles.Core.Exceptions
+namespace Pacco.Services.Vehicles.Application.Exceptions
 {
     public class VehicleNotFoundException : ExceptionBase
     {
