@@ -14,11 +14,21 @@ namespace Pacco.Services.Vehicles.Infrastructure.Mongo.Queries.Handlers
 
         public SearchVehiclesHandler(IMongoRepository<VehicleDocument, Guid> repository)
             => _repository = repository;
-        
+
         public async Task<PagedResult<VehicleDto>> HandleAsync(SearchVehicles query)
         {
-            var pagedResult = await  _repository.BrowseAsync(v => v.PayloadCapacity >= query.PayloadCapacity
-                              && v.LoadingCapacity >= query.LoadingCapacity && v.Variants == query.Variants, query);
+            PagedResult<VehicleDocument> pagedResult;
+            if (query.PayloadCapacity <= 0 && query.LoadingCapacity <= 0 && query.Variants <= 0)
+            {
+                pagedResult = await _repository.BrowseAsync(_ => true, query);
+            }
+            else
+            {
+                pagedResult = await _repository.BrowseAsync(v => v.PayloadCapacity >= query.PayloadCapacity
+                                                                 && v.LoadingCapacity >= query.LoadingCapacity &&
+                                                                 v.Variants == query.Variants, query);
+            }
+
 
             return pagedResult?.Map(d => d.AsDto());
         }
