@@ -3,6 +3,7 @@ using System.Linq;
 using Convey;
 using Convey.CQRS.Queries;
 using Convey.Discovery.Consul;
+using Convey.Docs.Swagger;
 using Convey.HTTP;
 using Convey.LoadBalancing.Fabio;
 using Convey.MessageBrokers.CQRS;
@@ -14,6 +15,7 @@ using Convey.Tracing.Jaeger;
 using Convey.Tracing.Jaeger.RabbitMQ;
 using Convey.WebApi;
 using Convey.WebApi.CQRS;
+using Convey.WebApi.Swagger;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Server.Kestrel.Core;
@@ -36,6 +38,7 @@ namespace Pacco.Services.Vehicles.Infrastructure
     {
         public static IConveyBuilder AddInfrastructure(this IConveyBuilder builder)
         {
+            builder.Services.AddOpenTracing();
             builder.Services.AddTransient<IVehiclesRepository, VehiclesMongoRepository>();
             builder.Services.AddTransient<IMessageBroker, MessageBroker>();
             builder.Services.AddTransient<IAppContextFactory, AppContextFactory>();
@@ -55,12 +58,14 @@ namespace Pacco.Services.Vehicles.Infrastructure
                 .AddJaeger()
                 .AddMongo()
                 .AddHandlersLogging()
-                .AddMongoRepository<VehicleDocument, Guid>("Vehicles");
+                .AddMongoRepository<VehicleDocument, Guid>("Vehicles")
+                .AddWebApiSwaggerDocs();
         }
 
         public static IApplicationBuilder UseInfrastructure(this IApplicationBuilder app)
         {
             app.UseErrorHandler()
+                .UseSwaggerDocs()
                 .UseJaeger()
                 .UseInitializers()
                 .UsePublicContracts<ContractAttribute>()
