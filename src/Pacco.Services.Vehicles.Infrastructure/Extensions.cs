@@ -1,12 +1,18 @@
 using System;
 using System.Linq;
+using System.Text;
 using Convey;
+using Convey.CQRS.Commands;
+using Convey.CQRS.Events;
 using Convey.CQRS.Queries;
 using Convey.Discovery.Consul;
 using Convey.Docs.Swagger;
 using Convey.HTTP;
 using Convey.LoadBalancing.Fabio;
+using Convey.MessageBrokers;
 using Convey.MessageBrokers.CQRS;
+using Convey.MessageBrokers.Inbox;
+using Convey.MessageBrokers.Outbox;
 using Convey.MessageBrokers.RabbitMQ;
 using Convey.Metrics.AppMetrics;
 using Convey.Persistence.MongoDB;
@@ -22,9 +28,10 @@ using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json;
 using Pacco.Services.Vehicles.Application;
 using Pacco.Services.Vehicles.Application.Commands;
-using Pacco.Services.Vehicles.Application.Messaging;
+using Pacco.Services.Vehicles.Application.Services;
 using Pacco.Services.Vehicles.Core.Repositories;
 using Pacco.Services.Vehicles.Infrastructure.Contexts;
+using Pacco.Services.Vehicles.Infrastructure.Decorators;
 using Pacco.Services.Vehicles.Infrastructure.Exceptions;
 using Pacco.Services.Vehicles.Infrastructure.Logging;
 using Pacco.Services.Vehicles.Infrastructure.Mongo.Documents;
@@ -42,6 +49,8 @@ namespace Pacco.Services.Vehicles.Infrastructure
             builder.Services.AddTransient<IMessageBroker, MessageBroker>();
             builder.Services.AddTransient<IAppContextFactory, AppContextFactory>();
             builder.Services.AddTransient(ctx => ctx.GetRequiredService<IAppContextFactory>().Create());
+            builder.Services.TryDecorate(typeof(ICommandHandler<>), typeof(InboxCommandHandlerDecorator<>));
+            builder.Services.TryDecorate(typeof(IEventHandler<>), typeof(InboxEventHandlerDecorator<>));
 
             return builder
                 .AddQueryHandlers()
@@ -50,6 +59,8 @@ namespace Pacco.Services.Vehicles.Infrastructure
                 .AddConsul()
                 .AddFabio()
                 .AddRabbitMq(plugins: p => p.AddJaegerRabbitMqPlugin())
+                .AddMessageInbox()
+                .AddMessageOutbox()
                 .AddExceptionToMessageMapper<ExceptionToMessageMapper>()
                 .AddMongo()
                 .AddRedis()
@@ -81,5 +92,20 @@ namespace Pacco.Services.Vehicles.Infrastructure
             => accessor.HttpContext?.Request.Headers.TryGetValue("Correlation-Context", out var json) is true
                 ? JsonConvert.DeserializeObject<CorrelationContext>(json.FirstOrDefault())
                 : null;
+        
+        internal static string GetSpanContext(this IMessageProperties messageProperties, string header)
+        {
+            if (messageProperties is null)
+            {
+                return string.Empty;
+            }
+
+            if (messageProperties.Headers.TryGetValue(header, out var span) && span is byte[] spanBytes)
+            {
+                return Encoding.UTF8.GetString(spanBytes);
+            }
+
+            return string.Empty;
+        }
     }
 }
