@@ -13,7 +13,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Pacco.Services.Vehicles.Application\Pacco.Services.Vehicles.Application.csproj" />
     <ProjectReference Include="..\Pacco.Services.Vehicles.Infrastructure\Pacco.Services.Vehicles.Infrastructure.csproj" />
   </ItemGroup>
 
