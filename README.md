@@ -22,4 +22,10 @@ Service can be started locally via `dotnet run` command (executed in the `/src/P
 
 By default, the service will be available under http://localhost:5009.
 
-You can also start the service via Docker, either by building a local Dockerfile: `docker build -t pacco.services.vehicles .` or using the official one `docker pull devmentors/pacco.services.vehicles`.
+You can also start the service via Docker, either by building a local Dockerfile: 
+
+`docker build -t pacco.services.vehicles .` 
+
+or using the official one: 
+
+`docker pull devmentors/pacco.services.vehicles`
