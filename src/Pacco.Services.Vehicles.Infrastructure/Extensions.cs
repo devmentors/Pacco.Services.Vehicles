@@ -67,7 +67,7 @@ namespace Pacco.Services.Vehicles.Infrastructure
                 .AddJaeger()
                 .AddMongo()
                 .AddHandlersLogging()
-                .AddMongoRepository<VehicleDocument, Guid>("Vehicles")
+                .AddMongoRepository<VehicleDocument, Guid>("vehicles")
                 .AddWebApiSwaggerDocs();
         }
 
