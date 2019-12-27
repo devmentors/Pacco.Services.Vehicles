@@ -1,6 +1,6 @@
 namespace Pacco.Services.Vehicles.Core.Exceptions
 {
-    public class InvalidVehicleDescriptionException : ExceptionBase
+    public class InvalidVehicleDescriptionException : DomainException
     {
         public override string Code => "invalid_vehicle_description";
 
