@@ -1,5 +1,4 @@
 using System;
-using Convey.CQRS.Events;
 using Convey.MessageBrokers.RabbitMQ;
 using Pacco.Services.Vehicles.Application.Commands;
 using Pacco.Services.Vehicles.Application.Events.Rejected;
@@ -15,25 +14,25 @@ namespace Pacco.Services.Vehicles.Infrastructure.Exceptions
             {
                 InvalidVehicleCapacity ex => message switch
                 {
-                    AddVehicle command => (IRejectedEvent) new AddVehicleRejected(command.VehicleId, ex.Message,ex.Code),
+                    AddVehicle command => new AddVehicleRejected(command.VehicleId, ex.Message,ex.Code),
                     UpdateVehicle command => new UpdateVehicleRejected(command.VehicleId, ex.Message, ex.Code),
                     _ => null,
                 },
                 InvalidVehicleDescriptionException ex => message switch
                 {
-                    AddVehicle command => (IRejectedEvent) new AddVehicleRejected(command.VehicleId, ex.Message,ex.Code),
+                    AddVehicle command => new AddVehicleRejected(command.VehicleId, ex.Message,ex.Code),
                     UpdateVehicle command => new UpdateVehicleRejected(command.VehicleId, ex.Message, ex.Code),
                     _ => null,
                 },
                 InvalidVehiclePricePerServiceException ex => message switch
                 {
-                    AddVehicle command => (IRejectedEvent) new AddVehicleRejected(command.VehicleId, ex.Message,ex.Code),
+                    AddVehicle command => new AddVehicleRejected(command.VehicleId, ex.Message,ex.Code),
                     UpdateVehicle command => new UpdateVehicleRejected(command.VehicleId, ex.Message, ex.Code),
                     _ => null,
                 },
                 VehicleNotFoundException ex => message switch
                 {
-                    UpdateVehicle command => (IRejectedEvent) new UpdateVehicleRejected(command.VehicleId, ex.Message,ex.Code),
+                    UpdateVehicle command => new UpdateVehicleRejected(command.VehicleId, ex.Message,ex.Code),
                     DeleteVehicle command => new DeleteVehicleRejected(command.VehicleId, ex.Message, ex.Code),
                     _ => null,
                 },
