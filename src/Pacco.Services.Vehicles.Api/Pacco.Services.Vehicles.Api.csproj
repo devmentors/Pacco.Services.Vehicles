@@ -16,4 +16,8 @@
     <ProjectReference Include="..\Pacco.Services.Vehicles.Infrastructure\Pacco.Services.Vehicles.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Include="certs\**" CopyToPublishDirectory="Always"/>
+  </ItemGroup>
+
 </Project>
