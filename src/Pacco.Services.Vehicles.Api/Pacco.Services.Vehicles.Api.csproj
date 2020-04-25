@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="certs\**" CopyToPublishDirectory="Always"/>
+    <Content Include="certs\**" CopyToPublishDirectory="Always" />
   </ItemGroup>
 
 </Project>
